@@ -1,4 +1,4 @@
-### Guillaume Jeanneret Sanmiguel Webpage
+# Guillaume Jeanneret Sanmiguel Webpage
 
 ![photo](pictures/cutp.jpg)
 
@@ -31,5 +31,5 @@ I have a strong basis on Programming, Mathematics and Machine Learning, spectial
 
 ## Others
 
-# MTBI summer program 2017 - Research Experience for Undergraduate (REU)
+### MTBI summer program 2017 - Research Experience for Undergraduate (REU)
 
