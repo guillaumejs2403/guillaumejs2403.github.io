@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Guillaume Jeanneret Sanmiguel</title>
+	<link rel="stylesheet" href="styles.css">
+	<script src="scripts.js"></script>
+</head>
+
+
+
+<body class="bodyothers">
+	<!-- Inside the Sidebar -->
+	<div id='mySideBar' class='sidebar'>
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		<button onclick="window.location.href='index.html';">Home</button>
+		<button onclick="window.location.href='summary.html';" id='choosen'>Summary</button>
+		<button onclick="window.location.href='about_me.html';">About Me</button>
+		<button onclick="window.location.href='publications.html';">Publications</button>
+		<button onclick="window.location.href='experience.html';">Experience</button>
+		<button onclick="window.location.href='skills.html';">Skills</button>
+	</div>
+
+	<!-- Top bar -->
+	<div class='navbar'>
+		<button class="openbtn" onclick="openNav()">&#9776;</button>
+		<a>Summary</a>
+	</div>
+
+	<div id='empty'></div>
+
+	<!-- Header -->
+	<div id='Head' class="header">
+		<h1>Guillaume Jeanneret Sanmiguel, M.Sc.</h1>
+	</div>
+
+	<!-- Main body -->
+	<div id='main'>
+		<!-- Change MENU for the name to display  and don't forget to change the ids of the button, container and content-->
+		<div style="margin-top: 1%;">
+			<button class="oc-button" onclick="openProject('cont2', 'content2', 'button2', 'MENU')" style="float: left;" id='button2'>OPEN MENU</button>
+		</div>
+
+		<div class="container" id="cont2">
+			<div class="snapshot">
+				<p>It is just a picture of me.</p>
+				<img src="pictures/grado.jpg" alt='This is a picture of me' class="snapimg">
+			</div>
+			<div class="content" id="content2">
+				<p>
+					Insert text here with next line items
+				</p>
+			</div>
+		</div>
+
+		<div style="margin-top: 1%;">
+			<button class="oc-button" onclick="openProject('cont', 'content', 'button', 'MENU2')" style="float: left;" id='button'>OPEN MENU2</button>
+		</div>
+
+		<div class="container" id="cont">
+			<div class="snapshot">
+				<p>It is just a picture of me.</p>
+				<img src="pictures/grado.jpg" alt='This is a picture of me' class="snapimg">
+			</div>
+			<div class="content" id="content">
+				<p>
+					Insert text here with next line items
+				</p>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Guillaume Jeanneret Sanmiguel</title>
+	<link rel="stylesheet" href="styles.css">
+	<script src="scripts.js"></script>
+</head>
+
+
+
+<body class="bodyothers">
+	<!-- Inside the Sidebar -->
+	<div id='mySideBar' class='sidebar'>
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		<button onclick="window.location.href='index.html';">Home</button>
+		<button onclick="window.location.href='summary.html';">Summary</button>
+		<button onclick="window.location.href='about_me.html';">About Me</button>
+		<button onclick="window.location.href='publications.html';" id='choosen'>Publications</button>
+		<button onclick="window.location.href='experience.html';">Experience</button>
+		<button onclick="window.location.href='skills.html';">Skills</button>
+	</div>
+
+	<!-- Top bar -->
+	<div class='navbar'>
+		<button class="openbtn" onclick="openNav()">&#9776;</button>
+		<a>Publications</a>
+	</div>
+
+	<div id='empty'></div>
+
+	<!-- Header -->
+	<div id='Head' class="header">
+		<h1>Guillaume Jeanneret Sanmiguel, M.Sc.</h1>
+	</div>
+
+	<!-- Main body -->
+	<div id='main'>
+		<!-- GABOR -->
+		<div style="margin-top: 1%;">
+			<button class="oc-button" onclick="openProject('cont-gabor', 'content-gabor', 'button-gabor', 'Gabor Enhance Network Robustness')" style="float: left;" id='button-gabor'>OPEN Gabor Enhance Network Robustness</button>
+		</div>
+		<div class="container" id="cont-gabor">
+			<div class="snapshot">
+				<a href="https://arxiv.org/abs/1912.05661">Gabor Enhance Network Robustness</a>
+				<img src="pictures/grado.jpg" alt='This is a picture of me' class="snapimg">
+			</div>
+			<div class="content" id="content-gabor">
+				<p>
+					Insert text here with next line items
+				</p>
+			</div>
+		</div>
+
+		<!-- MAIN -->
+		<div style="margin-top: 1%;">
+			<button class="oc-button" onclick="openProject('cont-main', 'content-main', 'button-main', 'MAIN: Multi-Attention Instance Network')" style="float: left;" id='button-main'>OPEN MAIN: Multi-Attention Instance Network</button>
+		</div>
+
+		<div class="container" id="cont-main">
+			<div class="snapshot">
+				<a href="https://arxiv.org/abs/1904.05847">MAIN: Multi-Attention Instance Network</a>
+				<img src="pictures/grado.jpg" alt='This is a picture of me' class="snapimg">
+			</div>
+			<div class="content" id="content-main">
+				<p>
+					Insert text here with next line items
+				</p>
+			</div>
+		</div>
+
+		<!-- Smart Pooling -->
+		<div style="margin-top: 1%;">
+			<button class="oc-button" onclick="openProject('cont-sp', 'content-sp', 'button-sp', 'Smart Pooling')" style="float: left;" id='button-sp'>OPEN Smart Pooling</button>
+		</div>
+
+		<div class="container" id="cont-sp">
+			<div class="snapshot">
+				<a href="https://arxiv.org/abs/1904.05847">Smart Pooling</a>
+				<img src="pictures/grado.jpg" alt='This is a picture of me' class="snapimg">
+			</div>
+			<div class="content" id="content-sp">
+				<p>
+					Insert text here with next line items
+				</p>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
