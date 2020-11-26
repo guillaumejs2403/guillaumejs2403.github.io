@@ -9,7 +9,7 @@
 
 
 
-<body class="bodyothers">
+<body class="body-publications">
 	<!-- Inside the Sidebar -->
 	<div id='mySideBar' class='sidebar'>
 		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -36,53 +36,85 @@
 
 	<!-- Main body -->
 	<div id='main'>
+		<div style="margin-top: 1%;"></div>
 		<!-- GABOR -->
-		<div style="margin-top: 1%;">
-			<button class="oc-button" onclick="openProject('cont-gabor', 'content-gabor', 'button-gabor', 'Gabor Enhance Network Robustness')" style="float: left;" id='button-gabor'>OPEN Gabor Enhance Network Robustness</button>
-		</div>
+		<button class="oc-button" onclick="openProject('cont-gabor', 'content-gabor', 'button-gabor', 'Gabor Enhance Network Robustness')" id='button-gabor'>Gabor Enhance Network Robustness</button>
+
 		<div class="container" id="cont-gabor">
 			<div class="snapshot">
-				<a href="https://arxiv.org/abs/1912.05661">Gabor Enhance Network Robustness</a>
 				<img src="pictures/grado.jpg" alt='This is a picture of me' class="snapimg">
 			</div>
 			<div class="content" id="content-gabor">
-				<p>
-					Insert text here with next line items
-				</p>
+				<div class="content-title">
+					<p>Gabor Layers Enhance Network Robustness (ECCV20)</p>
+					<button onclick="window.location.href='https://arxiv.org/abs/1912.05661';" style="float: right;">Paper</button>
+				</div>
+
+				<hr>
+
+				<div style="overflow-x: hidden; overflow-y: scroll; height: 73%;">
+					<p>
+						<strong>Abstract:</strong> We revisit the benefits of merging classical vision concepts with deep learning models. In particular, we explore the effect on robustness against adversarial attacks of replacing the first layers of various deep architectures with Gabor layers, i.e. convolutional layers with filters that are based on learnable Gabor parameters. We observe that architectures enhanced with Gabor layers gain a consistent boost in robustness over regular models and preserve high generalizing test performance, even though these layers come at a negligible increase in the number of parameters. We then exploit the closed form expression of Gabor filters to derive an expression for a Lipschitz constant of such filters, and harness this theoretical result to develop a regularizer we use during training to further enhance network robustness. We conduct extensive experiments with various architectures (LeNet, AlexNet, VGG16 and WideResNet) on several datasets (MNIST, SVHN, CIFAR10 and CIFAR100) and demonstrate large empirical robustness gains. Furthermore, we experimentally show how our regularizer provides consistent robustness improvements. 
+					</p>
+				</div>
 			</div>
 		</div>
 
 		<!-- MAIN -->
-		<div style="margin-top: 1%;">
-			<button class="oc-button" onclick="openProject('cont-main', 'content-main', 'button-main', 'MAIN: Multi-Attention Instance Network')" style="float: left;" id='button-main'>OPEN MAIN: Multi-Attention Instance Network</button>
-		</div>
+		<button class="oc-button" onclick="openProject('cont-main', 'content-main', 'button-main', 'MAIN: Multi-Attention Instance Network')" style="float: left;" id='button-main'>MAIN: Multi-Attention Instance Network</button>
 
 		<div class="container" id="cont-main">
 			<div class="snapshot">
-				<a href="https://arxiv.org/abs/1904.05847">MAIN: Multi-Attention Instance Network</a>
 				<img src="pictures/grado.jpg" alt='This is a picture of me' class="snapimg">
 			</div>
+
 			<div class="content" id="content-main">
-				<p>
-					Insert text here with next line items
-				</p>
+				<div class="content-title">
+					<p>MAIN: Multi-Attention Instance Network (arXiv prepint)</p>
+					<button onclick="window.location.href='https://arxiv.org/abs/1904.05847';" style="float: right;">Paper</button>
+				</div>
+
+				<hr>
+
+				<div style="overflow-x: hidden; overflow-y: scroll; height: 73%;">
+					<p>
+						<strong>Abstract:</strong> Instance-level video segmentation requires a solid integration of spatial and temporal information. However, current methods rely mostly on domain-specific information (online learning) to produce accurate instance-level segmentations. We propose a novel approach that relies exclusively on the integration of generic spatio-temporal attention cues. Our strategy, named Multi-Attention Instance Network (MAIN), overcomes challenging segmentation scenarios over arbitrary videos without modelling sequence- or instance-specific knowledge. We design MAIN to segment multiple instances in a single forward pass, and optimize it with a novel loss function that favors class agnostic predictions and assigns instance-specific penalties. We achieve state-of-the-art performance on the challenging Youtube-VOS dataset and benchmark, improving the unseen Jaccard and F-Metric by 6.8% and 12.7% respectively, while operating at real-time (30.3 FPS). 
+					</p>
+				</div>
 			</div>
 		</div>
 
 		<!-- Smart Pooling -->
-		<div style="margin-top: 1%;">
-			<button class="oc-button" onclick="openProject('cont-sp', 'content-sp', 'button-sp', 'Smart Pooling')" style="float: left;" id='button-sp'>OPEN Smart Pooling</button>
+		<div>
+			<button class="oc-button" onclick="openProject('cont-sp', 'content-sp', 'button-sp', 'Smart Pooling')" style="float: left;" id='button-sp'>Smart Pooling</button>
 		</div>
 
 		<div class="container" id="cont-sp">
 			<div class="snapshot">
-				<a href="https://arxiv.org/abs/1904.05847">Smart Pooling</a>
 				<img src="pictures/grado.jpg" alt='This is a picture of me' class="snapimg">
 			</div>
 			<div class="content" id="content-sp">
-				<p>
-					Insert text here with next line items
-				</p>
+				<div class="content-title">
+					<p>Smart Pooling: AI-powered COVID-19 Testing (medRXiv)</p>
+					<button onclick="window.location.href='https://www.medrxiv.org/content/10.1101/2020.07.13.20152983v2';" style="float: right;">Paper</button>
+				</div>
+
+				<hr>
+
+				<div style="overflow-x: hidden; overflow-y: scroll; height: 73%;">
+					<p>
+						<strong>Background:</strong> COVID-19 is an acute respiratory illness caused by the novel coronavirusSARS-CoV-2. The disease has rapidly spread to most countries and territories and hascaused 14.2 million confirmed infections and 602,037 deaths as of July 19th 2020. Massive molecular testing for COVID-19 has been pointed as fundamental to moderate the spread of the disease. Pooling methods can enhance the efficiency of testing, but they are viable only at very low incidences of the disease. We propose Smart Pooling, a machine learning method that uses clinical and sociodemographic data from patients to increase the efficiency of pooled molecular testing for COVID-19 by arranging samples into all-negative pools.
+					</p>
+					<p>
+						<strong>Methods:</strong> We developed machine learning methods that estimate the probability that a sample will test positive for SARS-Cov-2 based on complementary information from the sample. We use these predictions to exclude samples predicted as positive from pools. We trained our machine learning methods on a dataset of 2000 patients tested for SARS-Cov-2 from April to July in Bogota, Colombia.
+					</p>
+					<p>
+						<strong>Findings:</strong> Our method, Smart Pooling, shows efficiency of 306% at a disease prevalence of 5% and efficiency of 107% at disease a prevalence of up to 50%, a regime in which two-stage pooling offers marginal efficiency gains compared to individual testing. Additionally, we calculate the possible efficiency gains of one- and two-dimensional two-stage pooling strategies, and present the optimal strategies for disease prevalences up to 25%. We discuss practical limitations to conduct pooling in the laboratory.
+					</p>
+					<p>
+						<strong>Interpretation:</strong> Pooled testing has been a theoretically alluring option to increase the coverage of diagnostics since its proposition by Dorfmann during World War II. Although there are examples of successfully using pooled testing to reduce the cost of diagnostics, its applicability has remained limited because efficiency drops rapidly as prevalence increases. Not only does our method provide a cost-effective solution to increase the coverage of testing amid the COVID-19 pandemic, but it also demonstrates that artificial intelligence can be used complementary with well-established techniques in the medical praxis.
+					</p>
+				</div>
 			</div>
 		</div>
 	</div>

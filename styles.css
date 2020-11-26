@@ -1,13 +1,25 @@
+/*main body styles*/
+
+p {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
 .bodyhome{
-	background:  white;
-	background-image: url("pictures/photo.jpg");
+	background: white;
 	background-position: top;
 	background-size: cover;
 	background-repeat: no-repeat;
+	background-image: url("pictures/cover.jpg");
+	background-attachment: fixed;
 }
 
-.bodyothers{
-	background:  white;
+.body-publications{
+	background: white;
+	background-position: top;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-image: url("pictures/IMG_20190608_143007.jpg");
 }
 
 button{
@@ -15,6 +27,7 @@ button{
 }
 
 /* Clear floats after the columns */
+
 .row:after {
 	content: "";
 	display: table;
@@ -37,12 +50,20 @@ button{
 }
 
 .initheader{
-	margin-top: 10%;
+	margin-top: 5%;
 	padding: 50px;
 	text-align: center;
 	background: rgba(255, 196, 51, 0.75);
 	font-size: 20px;
 	color: rgba(0,0,0,1.0);
+	animation-name: initheader-animation;
+	animation-duration: 2s;
+	animation-delay: -0.1s;
+}
+
+@keyframes initheader-animation{
+	from {margin-top: 10%}
+	to {margin-top: 5%}
 }
 
 /*Sidebar styles*/
@@ -83,9 +104,6 @@ button{
 	margin-left: 50px;
 }
 
-/*all buttons within sidebar
-will have these properties*/
-
 .sidebar button{
 	overflow: hidden;
 	background-color: #111;
@@ -106,8 +124,6 @@ will have these properties*/
 	height: 8%;
 }
 
-/* choose this id for the choosen
-button on the sidebar */
 #choosen{
 	background-color: #f1f1f1;
 	color: black;
@@ -127,9 +143,6 @@ button on the sidebar */
 .openbtn:hover {
 	background-color: #444;
 }
-
-/*this enables to move the content
-in ID="main in a stylish way*/
 
 #main {
 	transition: margin-left 1.0s;
@@ -198,6 +211,7 @@ in ID="main in a stylish way*/
 .oc-button{
 	width: 50%;
 	height: 50px;
+	/*background: linear-gradient(to right, black, black, black, rgba(0, 0, 0, 0));*/
 	background: black;
 	color: white;
 	/*transition: margin-left 0.5s;*/
@@ -212,16 +226,12 @@ in ID="main in a stylish way*/
 }
 
 .container{
-	border-radius: 4px;
-	border-width: 4px;
-	border-radius: 10px;
-	/*margin-bottom: 15px;*/
 	width: 100%;
 	height: 0;
 	transition-duration: 0.5s;
 	transition-delay: 0s;
 	float: left;
-	background: white;
+	background: rgba(0, 0, 0, 0);
 	overflow: hidden;
 }
 
@@ -230,47 +240,97 @@ in ID="main in a stylish way*/
 	transition-duration: 0.5s;
 	width: 0%;
 	float: left;
-	height: 100%;
+	height: 400px;
 	overflow: hidden;
 	border: 0px solid #ddd;
 	border-radius: 10px;
-	white-space: pre;
 	margin-left: 1%;
 	overflow: hidden;
-	background: white;
+	background: rgba(255,255,255,0.75);
+	margin-top: 5px;
+}
+
+.content-title{
+	height: 20%;
+	position: relative;
+}
+
+.content-title p{
+	position: absolute;
+	cursor: pointer;
+	overflow: hidden;
+	white-space: nowrap;
+	font-size: 20px;
+	text-decoration: none;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%); 
+}
+
+.content-title button{
+	border-radius: 5px;
+	border: 0;
+	padding: 1%;
+	transition-duration: 0.2s;
+}
+
+.content-title button:hover{
+	color: white;
+	background: black;
+}
+
+.content hr{
+	width: 94%;
+	border-width: 1%;
 }
 
 .content p{
-	padding: 0 5% 0  5%;
-	overflow: hidden;
+	padding: 0 3% 3% 3%;
 }
 
 .snapshot{
 	width: 25%;
-	height: 100%;
+	height: 400px;
 	float: left;
-	text-align: center;
-	border: 3px solid #ddd;
 	border-radius: 10px;
 	transition-duration: 0.2s;
-	cursor: pointer;
 	overflow: hidden;
-}
-
-.snapshot:hover{
-	box-shadow: 0 0 5px 5px #888888;
-}
-
-.snapshot a{
-	cursor: pointer;
-	overflow: hidden;
-	font-size: 20px;
+	background: rgba(255,255,255,0.75);
+	position: relative;
+	top: 5px;
+	left: 5px;
 }
 
 .snapimg{
-	height: 85%;
+	height: auto;
+	width: auto;
+	max-width: 90%;
+	max-height: 90%;
+	margin-left: auto;
+	margin-right: auto;
 	border-radius: 10px;
 	transition-duration: 0.2s;
 	overflow: hidden;
-	overflow: hidden;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+/* Summary components*/
+
+.right-info .left-info{
+	width: 60%;
+	height: 300px;
+	margin-top: 1%;
+	transition-duration: 0.5s;
+	transition-delay: -0.1s;
+}
+
+.right-info{
+	float: right;
+}
+
+.left-info{
+	float: left;
 }
