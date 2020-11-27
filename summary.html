@@ -9,7 +9,7 @@
 
 
 
-<body class="body-publications">
+<body class="body-summary">
 	<!-- Inside the Sidebar -->
 	<div id='mySideBar' class='sidebar'>
 		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -19,6 +19,11 @@
 		<button onclick="window.location.href='publications.html';">Publications</button>
 		<button onclick="window.location.href='experience.html';">Experience</button>
 		<button onclick="window.location.href='skills.html';">Skills</button>
+		<hr>
+		<button onclick="window.location.href='https://github.com/guillaumejs2403';">GitHub</button>
+		<button onclick="window.location.href='https://scholar.google.com/citations?user=b7nyrXIAAAAJ&hl=es';">Scholar</button>
+		<button onclick="window.location.href='https://co.linkedin.com/in/guillaume-jeanneret-sanmiguel-3b3884142';">LinkedIn</button>
+		<button onclick="copyEmail()" id="email"><span>E-mail</span></button>
 	</div>
 
 	<!-- Top bar -->
@@ -38,47 +43,125 @@
 	<div id='main'>
 		<div class="right-info">
 			<div class="content-title">
-				<p>This is a title</p>
+				<p>About me</p>
 			</div>
 
 			<hr>
 
 			<div style="overflow-x: hidden; overflow-y: auto; height: 73%;">
 				<p>
-					this is the content
+					I am a Biomedical Engineer with a minor on Mathematics and Computer Science from the Universidad de los Andes, Bogotá, Colombia, and a M.Sc. in Biomedical Engineering from the Universidad de los Andes as well. I have interest on Machine Learning, specially on Deep Learning, and Applied Mathematics.
+				</p>
+				<p>
+					I have a strong basis on Programming, Mathematics and Machine Learning, specially Deep Learning for natural images using the PyTorch framework. Currently, I work at the <a href="cinfonia.uniandes.edu.co">CinfonIA</a> research group led by <a href="https://scholar.google.com/citations?user=k0nZO90AAAAJ&hl=en">Professor Pablo Arbeláez</a> at the Universidad de los Andes.
+				</p>
+				<p>
+					I am from Colombia and Switzerland. I am passionate about learning, mathematics and machine learning. I am a fast learner and always try to understand the fundamentals behind the problems I approach. Currently I am seeking for a PhD on Deep Learning tool for natural images, and I am interested on topics such as Unsupervised Machine Learning, Representation Learning, Deep Metric Learning and Robust Training.
 				</p>
 			</div>
 		</div>
 
-		<div class="right-info">
+<!-- 		<div class="right-info">
 			<div class="div-full">
 				<p>
 					This is content, single paragraph
 				</p>				
+			</div>
+		</div> -->
+
+		<div class="left-info">
+			<div class="content-title">
+				<p>Education</p>
+			</div>
+
+			<hr>
+
+			<div style="overflow-x: hidden; overflow-y: auto; height: 73%;">
+				<ul>
+					<li><strong style="color: green;">M.Sc. in Biomedical Engineering</strong> - Universidad de los Andes, Bogotá, March 2020</li>
+					<li><strong style="color: green;">Biomedical Engineer</strong> - Universidad de los Andes, Bogotá, March 2018</li>
+					<li><strong style="color: green;">Mathematics and Computer Sciences (Minors)</strong> - Universidad de los Andes, Bogotá, March 2018</li>
+					<li><strong style="color: green;">Maturité Suize Degree (Math and Physics emphasys)</strong> - Helvetia School, Bogotá, 2013.</li>
+					<li><strong style="color: green;">High School Degree</strong> - Helvetia School, Bogotá, 2013</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="right-info">
+			<div class="content-title">
+				<p>Published Papers</p>
+			</div>
+
+			<hr>
+
+			<div style="overflow-x: hidden; overflow-y: auto; height: 73%;">
+				<ul>
+					<li><strong style="color: green;">ECCV20</strong> - Gabor Layers Enhance Network Robustness - <a href="https://arxiv.org/abs/1912.05661">link</a></li>
+					<li><strong style="color: green;">medRXiv</strong> - Smart Pooling: AI-powered COVID19 Testing - <a href="https://www.medrxiv.org/content/10.1101/2020.07.13.20152983v2">link</a></li>
+					<li><strong style="color: green;">arXiv</strong> - MAIN: Multi Attention Instance Network - <a href="https://arxiv.org/abs/1904.05847">link</a></li>
+					<li><strong style="color: green;">MTBI Research</strong> - The Dynamics of Math Anxiety as it is Transferred through Peer and Teacher Interactions - <a href="https://mtbi.asu.edu/content/dynamics-math-anxiety-it-transferred-through-peer-and-teacher-interactions">link</a></li>
+				</ul>
 			</div>
 		</div>
 
 		<div class="left-info">
 			<div class="content-title">
-				<p>This is a title</p>
+				<p>Experience and Internships</p>
+			</div>
+
+			<hr>
+
+			<div style="overflow-x: hidden; overflow-y: auto; height: 73%;">
+				<ul>
+					<li><strong style="color: green;">Graduate Research Assistant</strong>: 2019/01 - 2020/11</li>
+					<li><strong style="color: green;">Graduate Teaching Assistant</strong>: 2018/01 - 2018/12</li>
+					<li><strong style="color: green;">Undergraduate Teaching Assistant</strong>: 2015/07 - 2017/12</li>
+					<li><strong style="color: green;">MTBI Summer Program</strong>: 2017</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="right-info">
+			<div class="content-title">
+				<p>Skills</p>
 			</div>
 
 			<hr>
 
 			<div style="overflow-x: hidden; overflow-y: auto; height: 73%;">
 				<p>
-					this is the content
+					Languages:
 				</p>
+				<ul>
+					<li><strong style="color: green;">Spanish</strong> - Native</li>
+					<li><strong style="color: green;">French</strong> - Fluent (Maturité Suize)</li>
+					<li><strong style="color: green;">English</strong> - Fluent</li>
+				</ul>
+
+				<p>Programming:</p>
+				<ul>
+					<li><strong style="color: green;">Python</strong> - Advanced</li>
+					<li><strong style="color: green;">MatLab</strong> - Advanced</li>
+					<li><strong style="color: green;">HTML</strong> - Advanced Beginner</li>
+				</ul>
+
+				<p>Softwares and Libraries:</p>
+				<ul>
+					<li><strong style="color: green;">PyTorch (Python Library)</strong> - Advanced</li>
+					<li><strong style="color: green;">LaTeX</strong> - Advanced</li>
+					<li><strong style="color: green;">MS Word</strong> - Proficient</li>
+					<li><strong style="color: green;">MS Excel</strong> - Proficient</li>
+				</ul>
 			</div>
 		</div>
 
-		<div class="left-info">
+<!-- 		<div class="left-info">
 			<div class="div-full">
 				<p>
 					This is content, single paragraph
 				</p>				
 			</div>
-		</div>
+		</div> -->
 	</div>
 
 </body>

@@ -19,6 +19,11 @@
 		<button onclick="window.location.href='publications.html';" id='choosen'>Publications</button>
 		<button onclick="window.location.href='experience.html';">Experience</button>
 		<button onclick="window.location.href='skills.html';">Skills</button>
+		<hr>
+		<button onclick="window.location.href='https://github.com/guillaumejs2403';">GitHub</button>
+		<button onclick="window.location.href='https://scholar.google.com/citations?user=b7nyrXIAAAAJ&hl=es';">Scholar</button>
+		<button onclick="window.location.href='https://co.linkedin.com/in/guillaume-jeanneret-sanmiguel-3b3884142';">LinkedIn</button>
+		<button onclick="copyEmail()" id="email"><span>E-mail</span></button>
 	</div>
 
 	<!-- Top bar -->
@@ -46,7 +51,7 @@
 			</div>
 			<div class="content" id="content-gabor">
 				<div class="content-title">
-					<p>Gabor Layers Enhance Network Robustness (ECCV20)</p>
+					<p><strong>Gabor Layers Enhance Network Robustness (ECCV20)</strong></p>
 					<button onclick="window.location.href='https://arxiv.org/abs/1912.05661';" style="float: right;">Paper</button>
 				</div>
 
@@ -55,30 +60,6 @@
 				<div style="overflow-x: hidden; overflow-y: auto; height: 73%;">
 					<p>
 						<strong>Abstract:</strong> We revisit the benefits of merging classical vision concepts with deep learning models. In particular, we explore the effect on robustness against adversarial attacks of replacing the first layers of various deep architectures with Gabor layers, i.e. convolutional layers with filters that are based on learnable Gabor parameters. We observe that architectures enhanced with Gabor layers gain a consistent boost in robustness over regular models and preserve high generalizing test performance, even though these layers come at a negligible increase in the number of parameters. We then exploit the closed form expression of Gabor filters to derive an expression for a Lipschitz constant of such filters, and harness this theoretical result to develop a regularizer we use during training to further enhance network robustness. We conduct extensive experiments with various architectures (LeNet, AlexNet, VGG16 and WideResNet) on several datasets (MNIST, SVHN, CIFAR10 and CIFAR100) and demonstrate large empirical robustness gains. Furthermore, we experimentally show how our regularizer provides consistent robustness improvements. 
-					</p>
-				</div>
-			</div>
-		</div>
-
-		<!-- MAIN -->
-		<button class="oc-button" onclick="openProject('cont-main', 'content-main', 'button-main', 'MAIN: Multi-Attention Instance Network')" style="float: left;" id='button-main'>MAIN: Multi-Attention Instance Network</button>
-
-		<div class="container" id="cont-main">
-			<div class="snapshot">
-				<img src="pictures/main.png" alt='This is a picture of me' class="snapimg">
-			</div>
-
-			<div class="content" id="content-main">
-				<div class="content-title">
-					<p>MAIN: Multi-Attention Instance Network (arXiv prepint)</p>
-					<button onclick="window.location.href='https://arxiv.org/abs/1904.05847';" style="float: right;">Paper</button>
-				</div>
-
-				<hr>
-
-				<div style="overflow-x: hidden; overflow-y: auto; height: 73%;">
-					<p>
-						<strong>Abstract:</strong> Instance-level video segmentation requires a solid integration of spatial and temporal information. However, current methods rely mostly on domain-specific information (online learning) to produce accurate instance-level segmentations. We propose a novel approach that relies exclusively on the integration of generic spatio-temporal attention cues. Our strategy, named Multi-Attention Instance Network (MAIN), overcomes challenging segmentation scenarios over arbitrary videos without modelling sequence- or instance-specific knowledge. We design MAIN to segment multiple instances in a single forward pass, and optimize it with a novel loss function that favors class agnostic predictions and assigns instance-specific penalties. We achieve state-of-the-art performance on the challenging Youtube-VOS dataset and benchmark, improving the unseen Jaccard and F-Metric by 6.8% and 12.7% respectively, while operating at real-time (30.3 FPS). 
 					</p>
 				</div>
 			</div>
@@ -95,7 +76,7 @@
 			</div>
 			<div class="content" id="content-sp">
 				<div class="content-title">
-					<p>Smart Pooling: AI-powered COVID-19 Testing (medRXiv)</p>
+					<p><strong>Smart Pooling: AI-powered COVID-19 Testing (medRXiv)</strong></p>
 					<button onclick="window.location.href='https://www.medrxiv.org/content/10.1101/2020.07.13.20152983v2';" style="float: right;">Paper</button>
 				</div>
 
@@ -113,6 +94,54 @@
 					</p>
 					<p>
 						<strong>Interpretation:</strong> Pooled testing has been a theoretically alluring option to increase the coverage of diagnostics since its proposition by Dorfmann during World War II. Although there are examples of successfully using pooled testing to reduce the cost of diagnostics, its applicability has remained limited because efficiency drops rapidly as prevalence increases. Not only does our method provide a cost-effective solution to increase the coverage of testing amid the COVID-19 pandemic, but it also demonstrates that artificial intelligence can be used complementary with well-established techniques in the medical praxis.
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<!-- MAIN -->
+		<button class="oc-button" onclick="openProject('cont-main', 'content-main', 'button-main', 'MAIN: Multi-Attention Instance Network')" style="float: left;" id='button-main'>MAIN: Multi-Attention Instance Network</button>
+
+		<div class="container" id="cont-main">
+			<div class="snapshot">
+				<img src="pictures/main.png" alt='This is a picture of me' class="snapimg">
+			</div>
+
+			<div class="content" id="content-main">
+				<div class="content-title">
+					<p><strong>MAIN: Multi-Attention Instance Network (arXiv prepint)</strong></p>
+					<button onclick="window.location.href='https://arxiv.org/abs/1904.05847';" style="float: right;">Paper</button>
+				</div>
+
+				<hr>
+
+				<div style="overflow-x: hidden; overflow-y: auto; height: 73%;">
+					<p>
+						<strong>Abstract:</strong> Instance-level video segmentation requires a solid integration of spatial and temporal information. However, current methods rely mostly on domain-specific information (online learning) to produce accurate instance-level segmentations. We propose a novel approach that relies exclusively on the integration of generic spatio-temporal attention cues. Our strategy, named Multi-Attention Instance Network (MAIN), overcomes challenging segmentation scenarios over arbitrary videos without modelling sequence- or instance-specific knowledge. We design MAIN to segment multiple instances in a single forward pass, and optimize it with a novel loss function that favors class agnostic predictions and assigns instance-specific penalties. We achieve state-of-the-art performance on the challenging Youtube-VOS dataset and benchmark, improving the unseen Jaccard and F-Metric by 6.8% and 12.7% respectively, while operating at real-time (30.3 FPS). 
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<!-- MTBI -->
+		<button class="oc-button" onclick="openProject('cont-mtbi', 'content-mtbi', 'button-mtbi', 'The Dynamics of Math Anxiety as it is Transferred through Peer and Teacher Interactions')" style="float: left;" id='button-mtbi'>The Dynamics of Math Anxiety as it is Transferred through Peer and Teacher Interactions</button>
+
+		<div class="container" id="cont-mtbi">
+			<div class="snapshot">
+				<img src="pictures/mtbi.png" alt='This is a picture of me' class="snapimg">
+			</div>
+
+			<div class="content" id="content-mtbi">
+				<div class="content-title">
+					<p><strong>The Dynamics of Math Anxiety as it is Transferred through Peer and Teacher Interactions</strong></p>
+					<button onclick="window.location.href='https://mtbi.asu.edu/content/dynamics-math-anxiety-it-transferred-through-peer-and-teacher-interactions';" style="float: right;">Paper</button>
+				</div>
+
+				<hr>
+
+				<div style="overflow-x: hidden; overflow-y: auto; height: 73%;">
+					<p>
+						<strong>Abstract:</strong> This research develops a simple dynamical system framework to study the role of social mechanisms on the prevalence of math anxiety in United States education systems. Math anxiety is the self reported discomfort when attempting mathematical problems. This feeling prevents students from pursuing careers in science, technology, engineering, and mathematics in these fields. Female students are disproportionately affected by math anxiety, leading to poor representation. Previous studies have examined how teachers, with and without math anxiety, can “transmit” math anxiety to students. However, to our knowledge no mathematical models have been developed to thoroughly study long term intervention strategies for reducing transmission. In this paper, the effects of female teachers’ math anxiety are modeled as a contagion on female students who may become the next generation of teachers. The purpose of this research is to determine intervention strategies to effectively reduce students’ math anxiety. From our sensitivity analysis we conclude that, instead of focusing on professional development, math anxiety can be drastically reduced if teachers portray more positive attitudes towards math, and colleges focus on recruiting non-anxious math teachers. 
 					</p>
 				</div>
 			</div>

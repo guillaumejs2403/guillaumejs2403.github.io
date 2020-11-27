@@ -29,3 +29,14 @@ function closeProject(container, content, button, header){
 	document.getElementById(button).innerHTML = header
 	document.getElementById(button).onclick = function() {openProject(container, content, button, header)};
 }
+
+function copyEmail(){
+	var input = document.body.appendChild(document.createElement("input"));
+	input.value = 'g.jeanneret10@uniandes.edu.co';
+	input.focus();
+	input.select();
+	input.setSelectionRange(0, 99999);
+	document.execCommand('copy');
+	input.parentNode.removeChild(input);
+	alert('Email copied to clipboard.')
+}
