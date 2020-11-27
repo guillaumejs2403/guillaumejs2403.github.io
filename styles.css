@@ -202,7 +202,7 @@ button{
 }
 
 .buttonTransparent:hover{
-	color:  rgba(255,255,255,1.0);
+	color: rgba(255,255,255,1.0);
 	background: rgba(0,0,0,0.7);
 }
 
@@ -211,10 +211,8 @@ button{
 .oc-button{
 	width: 50%;
 	height: 50px;
-	/*background: linear-gradient(to right, black, black, black, rgba(0, 0, 0, 0));*/
 	background: black;
 	color: white;
-	/*transition: margin-left 0.5s;*/
 	transition-duration: 0.5s;
 	overflow: hidden;
 	border-width: 0;
@@ -319,18 +317,55 @@ button{
 
 /* Summary components*/
 
-.right-info .left-info{
+.right-info{
 	width: 60%;
 	height: 300px;
 	margin-top: 1%;
 	transition-duration: 0.5s;
 	transition-delay: -0.1s;
+	background: rgba(255,255,255,0.75);
+	float: right;
+	border-radius: 10px;
 }
 
-.right-info{
-	float: right;
+.right-info hr{
+	width: 94%;
+	border-width: 1%;
 }
+
+.right-info p{
+	padding: 0 3% 3% 3%;
+}
+
 
 .left-info{
+	width: 60%;
+	height: 300px;
+	margin-top: 1%;
+	transition-duration: 0.5s;
+	transition-delay: -0.1s;
+	background: rgba(255,255,255,0.75);
 	float: left;
+	border-radius: 10px;
+}
+
+.left-info hr{
+	width: 94%;
+	border-width: 1%;
+}
+
+.left-info p{
+	padding: 0 3% 3% 3%;
+}
+
+
+
+.div-full{
+	padding: 3%;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.div-full p{
+	padding: 1% 3%;
 }
