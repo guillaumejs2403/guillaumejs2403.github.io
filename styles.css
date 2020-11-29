@@ -24,7 +24,7 @@ a:after {
 }
 
 body{
-	background: white;
+	background:  #2b9dec;
 	background-position: top;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -429,4 +429,20 @@ button{
 .title button:hover{
 	color: white;
 	background: black;
+}
+
+.cvbutton {
+	margin-top: 1%;
+	width: 200px;
+	height: 80px;
+	background: #ffc433;
+	border-radius: 10px;
+	border-color: black;
+	transition-duration: 0.2s;
+	border-width: 20px
+}
+
+.cvbutton:hover {
+	background: black;
+	color: #f1f1f1;
 }
