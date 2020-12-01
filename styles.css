@@ -30,18 +30,32 @@ body{
 	background-repeat: no-repeat;
 	background-image: url("pictures/cover.jpg");
 	background-attachment: fixed;
+	overflow-y: scroll;
 }
 
 .bodyhome{
 	background-image: url("pictures/cover.jpg");
+	overflow-y: auto;
 }
 
 .body-publications{
-	background-image: url("pictures/IMG_20190608_143007.jpg");
+	background-image: url("pictures/publications.jpg");
 }
 
 .body-summary{
-	background-image: url("pictures/IMG_20190608_174842.jpg");
+	background-image: url("pictures/summary.jpg");
+}
+
+.body-experience{
+	background-image: url("pictures/experience.jpg");
+}
+
+.body-about-me{
+	background-image: url("pictures/about_me.jpg");
+}
+
+.body-skills{
+	background-image: url("pictures/skills.jpg");
 }
 
 
@@ -296,16 +310,15 @@ button{
 .content{
 	transition-delay: 0.5s;
 	transition-duration: 0.5s;
-	width: 0%;
 	float: left;
+	width: 0%;
 	height: 400px;
-	overflow: hidden;
 	border: 0px solid #ddd;
 	border-radius: 10px;
 	margin-left: 1%;
+	margin-top: 5px;
 	overflow: hidden;
 	background: rgba(255,255,255,0.75);
-	margin-top: 5px;
 }
 
 .content-title{
@@ -446,4 +459,14 @@ button{
 .cvbutton:hover {
 	background: black;
 	color: #f1f1f1;
+}
+
+.experience-div {
+	transition-duration: 0.5s;
+	height: 0;
+	/*overflow-y: scroll;*/
+	width: 100%;
+	padding-bottom: 1%;
+	padding-top: 1%;
+	/*white-space: pre-wrap;*/
 }

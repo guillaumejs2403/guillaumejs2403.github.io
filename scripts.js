@@ -40,3 +40,15 @@ function copyEmail(){
 	input.parentNode.removeChild(input);
 	alert('Email copied to clipboard.')
 }
+
+function openExperience(button, text, content){
+	document.getElementById(button).firstChild.data = "< Close";
+	document.getElementById(content).style.height = '300px';
+	document.getElementById(button).onclick = function() {closeExperience(button, text, content)}
+}
+
+function closeExperience(button, text, content){
+	document.getElementById(button).firstChild.data = "> " + text
+	document.getElementById(content).style.height = '0';
+	document.getElementById(button).onclick = function() {openExperience(button, text, content)}
+}
