@@ -304,6 +304,13 @@ button{
 	color: black; 
 }
 
+@media screen and (max-width: 600px){
+	.oc-button{
+		width: 100%;
+		background: rgba(0, 0, 0, 0.75);
+	}
+}
+
 .container{
 	width: 100%;
 	height: 0;
@@ -345,25 +352,29 @@ button{
 	transform: translate(-50%, -50%); 
 }
 
-.content-title button{
-	border-radius: 5px;
-	border: 0;
-	padding: 1%;
-	transition-duration: 0.2s;
-}
-
-.content-title button:hover{
-	color: white;
-	background: black;
-}
-
 .content hr{
 	width: 94%;
 	border-width: 1%;
 }
 
 .content p{
-	padding: 0 3% 3% 3%;
+	padding: 0 3% 1% 3%;
+}
+
+.content button{
+	border-radius: 5px;
+	border: 0;
+	margin-left: 3%;
+	transition-duration: 0.2s;
+}
+
+.content button:hover{
+	color: white;
+	background: black;
+}
+
+.content h3{
+	margin: 2% 0 2% 3%;
 }
 
 .snapshot{
@@ -395,6 +406,21 @@ button{
 	transform: translate(-50%, -50%);
 }
 
+@media screen and (max-width: 600px){
+	.content{
+		width: 100%;
+	}
+
+	.content-title:after {
+		height: auto;
+	}
+
+	.content-title p{
+		white-space: normal;
+	}
+}
+
+
 /* Summary components*/
 
 .info{
@@ -412,6 +438,16 @@ button{
 
 .left-info{
 	float: left;
+}
+
+@media screen and (max-width: 600px){
+	.info {
+		width: 100%;
+	}
+
+	.right-info{	
+		float: left;
+	}
 }
 
 .info hr{
@@ -452,6 +488,12 @@ button{
 	background: black;
 }
 
+@media screen and (max-width: 600px){
+	.title p{
+		white-space: normal;
+	}
+}
+
 .cvbutton {
 	margin-top: 1%;
 	width: 200px;
@@ -489,7 +531,7 @@ button{
 }
 
 @media screen and (max-width: 600px){
-	.#main-am {
+	#main-am {
 		width: 100%;
 		transform: translateX(0);
 	}
