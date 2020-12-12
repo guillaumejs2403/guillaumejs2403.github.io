@@ -80,6 +80,12 @@ button{
 	text-align: center;
 }
 
+@media screen and (max-width: 600px){
+	.col {
+		width: 100%;
+	}
+}
+
 .header{
 	padding: 50px;
 	text-align: center;
