@@ -488,6 +488,13 @@ button{
 	transform: translateX(33.3%);
 }
 
+@media screen and (max-width: 600px){
+	.#main-am {
+		width: 100%;
+		transform: translateX(0);
+	}
+}
+
 .container-am {
 	margin-top: 1%;
 	width: 100%;
