@@ -19,12 +19,12 @@ a {
 	font-family: Arial, Helvetica, sans-serif;
 }
 
-a:after {
-	color: blue;
+a: after {
+	color: green;
 }
 
 body{
-	background:  #2b9dec;
+	background: #2b9dec;
 	background-position: top;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -560,7 +560,7 @@ button{
 }
 
 .content-am p{
-	padding: 5%;
+	padding: 0 5% 0 5%;
 }
 
 .content-am hr{
