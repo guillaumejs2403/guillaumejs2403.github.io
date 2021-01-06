@@ -1,5 +1,9 @@
 /*main body styles*/
 
+* {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
 p {
 	font-family: Arial, Helvetica, sans-serif;
 	text-align: justify;
@@ -7,6 +11,15 @@ p {
 
 ul {
 	font-family: Arial, Helvetica, sans-serif;
+}
+
+table {
+	padding: 20px 0;
+	width: 95%;
+}
+
+td, th {
+	text-align: center;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -31,6 +44,10 @@ body{
 	background-image: url("pictures/cover.jpg");
 	background-attachment: fixed;
 	overflow-y: scroll;
+}
+
+hr {
+	width: 95%;
 }
 
 .bodyhome{
@@ -518,7 +535,7 @@ button{
 	padding-top: 1%;
 }
 
-/* ABOUT ME CSS */
+/* SKILLS CSS */
 
 #main-am {
 	transition: margin-left 1.0s;
@@ -586,4 +603,32 @@ button{
 	left: 50%;
 	transform: translate(-50%, -50%);
 	position: relative;
+}
+
+.skill-bar-container {
+	margin: 20px 10px;
+	width: 70%;
+	background-color: #9ec492;
+}
+
+.skill-bar{
+	height: 15px;
+	padding: 5px 0px;
+	background-color: #041100;
+	color: rgb(255, 255, 255);
+}
+
+.td-left {
+	width: 18%;
+	text-align: right;
+}
+
+.td-right {
+	width: 75%;
+	text-align: left;
+}
+
+.td-center{
+	width: 7%;
+	text-align: right;
 }
