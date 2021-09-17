@@ -43,8 +43,90 @@
 	<!-- Main body -->
 	<div id='main'>
 		<div style="margin-top: 1%;"></div>
+
+		<!-- AdvSeverity -->
+		<button class="oc-button" onclick="openProject('cont-advs', 'content-advs', 'button-advs', 'A Hierarchical Assessment of Adversarial Severity (ICCVW 2021)')" style="float: left;" id='button-advs'>A Hierarchical Assessment of Adversarial Severity (ICCVW 2021)</button>
+
+		<div class="container" id="cont-advs">
+			<div class="snapshot">
+				<img src="pictures/advseverity.PNG" alt='This is a picture of our project AdvSeverity' class="snapimg">
+			</div>
+
+			<div class="content" id="content-advs">
+				<div class="content-title">
+					<p><strong></strong></p>
+					
+				</div>
+
+				<h3>A Hierarchical Assessment of Adversarial Severity (ICCVW 2021)</h3>
+
+				<hr>
+
+				<div style="overflow-x: hidden; overflow-y: auto; height: 73%;">
+					<p>
+						<strong>Abstract:</strong> Adversarial Robustness is a growing field that evidences the brittleness of neural networks. Although the literature on adversarial robustness is vast, a dimension is missing in these studies: assessing how severe the mistakes are. We call this notion "Adversarial Severity" since it quantifies the downstream impact of adversarial corruptions by computing the semantic error between the misclassification and the proper label. We propose to study the effects of adversarial noise by measuring the Robustness and Severity into a large-scale dataset: iNaturalist-H. Our contributions are: (i) we introduce novel Hierarchical Attacks that harness the rich structured space of labels to create adversarial examples. (ii) These attacks allow us to benchmark the Adversarial Robustness and Severity of classification models. (iii) We enhance the traditional adversarial training with a simple yet effective Hierarchical Curriculum Training to learn these nodes gradually within the hierarchical tree. We perform extensive experiments showing that hierarchical defenses allow deep models to boost the adversarial Robustness by 1.85% and reduce the severity of all attacks by 0.17, on average. 
+					</p>
+					<button onclick="window.location.href='https://arxiv.org/abs/1904.05847';">Paper</button>
+				</div>
+			</div>
+		</div>
+
+		<!-- TTE -->
+		<button class="oc-button" onclick="openProject('cont-tte', 'content-tte', 'button-tte', 'Enhancing Adversarial Robustness via Test-time Transformation Ensembling (ICCVW 2021)')" style="float: left;" id='button-tte'>Enhancing Adversarial Robustness via Test-time Transformation Ensembling (ICCVW 2021)</button>
+
+		<div class="container" id="cont-tte">
+			<div class="snapshot">
+				<img src="pictures/tte.PNG" alt='This is a picture of our project TTE' class="snapimg">
+			</div>
+
+			<div class="content" id="content-tte">
+				<div class="content-title">
+					<p><strong></strong></p>
+					
+				</div>
+
+				<h3>Enhancing Adversarial Robustness via Test-time Transformation Ensembling (ICCVW 2021)</h3>
+
+				<hr>
+
+				<div style="overflow-x: hidden; overflow-y: auto; height: 73%;">
+					<p>
+						<strong>Abstract:</strong> Deep learning models are prone to being fooled by imperceptible perturbations known as adversarial attacks. In this work, we study how equipping models with Test-time Transformation Ensembling (TTE) can work as a reliable defense against such attacks. While transforming the input data, both at train and test times, is known to enhance model performance, its effects on adversarial robustness have not been studied. Here, we present a comprehensive empirical study of the impact of TTE, in the form of widely-used image transforms, on adversarial robustness. We show that TTE consistently improves model robustness against a variety of powerful attacks without any need for re-training, and that this improvement comes at virtually no trade-off with accuracy on clean samples. Finally, we show that the benefits of TTE transfer even to the certified robustness domain, in which TTE provides sizable and consistent improvements. 
+					</p>
+					<button onclick="window.location.href='https://arxiv.org/abs/1904.05847';">Paper</button>
+				</div>
+			</div>
+		</div>
+
+		<!-- MAIN -->
+		<button class="oc-button" onclick="openProject('cont-main', 'content-main', 'button-main', 'MAIN: Multi-Attention Instance Network (CVIU 2021)')" style="float: left;" id='button-main'>MAIN: Multi-Attention Instance Network (CVIU 2021)</button>
+
+		<div class="container" id="cont-main">
+			<div class="snapshot">
+				<img src="pictures/main.png" alt='This is a picture of our project MAIN' class="snapimg">
+			</div>
+
+			<div class="content" id="content-main">
+				<div class="content-title">
+					<p><strong></strong></p>
+					
+				</div>
+
+				<h3>MAIN: Multi-Attention Instance Network (CVIU 2021)</h3>
+
+				<hr>
+
+				<div style="overflow-x: hidden; overflow-y: auto; height: 73%;">
+					<p>
+						<strong>Abstract:</strong> Instance-level video segmentation requires a solid integration of spatial and temporal information. However, current methods rely mostly on domain-specific information (online learning) to produce accurate instance-level segmentations. We propose a novel approach that relies exclusively on the integration of generic spatio-temporal attention cues. Our strategy, named Multi-Attention Instance Network (MAIN), overcomes challenging segmentation scenarios over arbitrary videos without modelling sequence- or instance-specific knowledge. We design MAIN to segment multiple instances in a single forward pass, and optimize it with a novel loss function that favors class agnostic predictions and assigns instance-specific penalties. We achieve state-of-the-art performance on the challenging Youtube-VOS dataset and benchmark, improving the unseen Jaccard and F-Metric by 6.8% and 12.7% respectively, while operating at real-time (30.3 FPS). 
+					</p>
+					<button onclick="window.location.href='https://arxiv.org/abs/1904.05847';">Paper</button>
+				</div>
+			</div>
+		</div>
+
 		<!-- GABOR -->
-		<button class="oc-button" onclick="openProject('cont-gabor', 'content-gabor', 'button-gabor', 'Gabor Enhance Network Robustness')" id='button-gabor'>Gabor Enhance Network Robustness</button>
+		<button class="oc-button" onclick="openProject('cont-gabor', 'content-gabor', 'button-gabor', 'Gabor Enhance Network Robustness (ECCV 2020)')" id='button-gabor'>Gabor Enhance Network Robustness</button>
 
 		<div class="container" id="cont-gabor">
 			<div class="snapshot">
@@ -52,7 +134,7 @@
 			</div>
 			<div class="content" id="content-gabor">
 
-				<h3>Gabor Layers Enhance Network Robustness (ECCV20)</h3>
+				<h3>Gabor Layers Enhance Network Robustness (ECCV 2020)</h3>
 
 				<hr>
 
@@ -98,32 +180,6 @@
 			</div>
 		</div>
 
-		<!-- MAIN -->
-		<button class="oc-button" onclick="openProject('cont-main', 'content-main', 'button-main', 'MAIN: Multi-Attention Instance Network')" style="float: left;" id='button-main'>MAIN: Multi-Attention Instance Network</button>
-
-		<div class="container" id="cont-main">
-			<div class="snapshot">
-				<img src="pictures/main.png" alt='This is a picture of our project MAIN' class="snapimg">
-			</div>
-
-			<div class="content" id="content-main">
-				<div class="content-title">
-					<p><strong></strong></p>
-					
-				</div>
-
-				<h3>MAIN: Multi-Attention Instance Network (arXiv prepint)</h3>
-
-				<hr>
-
-				<div style="overflow-x: hidden; overflow-y: auto; height: 73%;">
-					<p>
-						<strong>Abstract:</strong> Instance-level video segmentation requires a solid integration of spatial and temporal information. However, current methods rely mostly on domain-specific information (online learning) to produce accurate instance-level segmentations. We propose a novel approach that relies exclusively on the integration of generic spatio-temporal attention cues. Our strategy, named Multi-Attention Instance Network (MAIN), overcomes challenging segmentation scenarios over arbitrary videos without modelling sequence- or instance-specific knowledge. We design MAIN to segment multiple instances in a single forward pass, and optimize it with a novel loss function that favors class agnostic predictions and assigns instance-specific penalties. We achieve state-of-the-art performance on the challenging Youtube-VOS dataset and benchmark, improving the unseen Jaccard and F-Metric by 6.8% and 12.7% respectively, while operating at real-time (30.3 FPS). 
-					</p>
-					<button onclick="window.location.href='https://arxiv.org/abs/1904.05847';">Paper</button>
-				</div>
-			</div>
-		</div>
 
 		<!-- MTBI -->
 		<button class="oc-button" onclick="openProject('cont-mtbi', 'content-mtbi', 'button-mtbi', 'The Dynamics of Math Anxiety as it is Transferred through Peer and Teacher Interactions')" style="float: left;" id='button-mtbi'>The Dynamics of Math Anxiety as it is Transferred through Peer and Teacher Interactions</button>
