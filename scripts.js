@@ -32,7 +32,7 @@ function closeProject(container, content, button, header){
 
 function copyEmail(){
 	var input = document.body.appendChild(document.createElement("input"));
-	input.value = 'g.jeanneret10@uniandes.edu.co';
+	input.value = 'guillaume.jeanneret-sanmiguel@unicaen.fr';
 	input.focus();
 	input.select();
 	input.setSelectionRange(0, 99999);
