@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Guillaume Jeanneret Sanmiguel</title>
+	<link rel="stylesheet" href="styles.css">
+	<script src="scripts.js"></script>
+	<!-- Place this tag in your head or just before your close body tag. -->
+	<script async defer src="https://buttons.github.io/buttons.js"></script>
+</head>
+
+
+
+<body class="body-papers">
+	<!-- Inside the Sidebar -->
+	<div id='mySideBar' class='sidebar'>
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		<button onclick="window.location.href='index.html';">Home</button>
+		<button onclick="window.location.href='summary.html';">Summary</button>
+		<button onclick="window.location.href='about_me.html';" id='choosen'>About Me</button>
+		<button onclick="window.location.href='publications.html';">Publications</button>
+		<button onclick="window.location.href='experience.html';">Experience</button>
+		<button onclick="window.location.href='skills.html';">Skills</button>
+		<hr>
+		<button onclick="window.location.href='https://github.com/guillaumejs2403';">GitHub</button>
+		<button onclick="window.location.href='https://scholar.google.com/citations?user=b7nyrXIAAAAJ&hl=es';">Scholar</button>
+		<button onclick="window.location.href='https://co.linkedin.com/in/guillaume-jeanneret-sanmiguel-3b3884142';">LinkedIn</button>
+		<button onclick="window.location.href='documents/CV_Guillaume_Jeanneret.pdf';"><i>Curriculum Vitae</i></button>
+		<button onclick="copyEmail()" id="email"><span>E-mail</span></button>
+	</div>
+
+	<!-- Top bar -->
+	<div class='navbar'>
+		<button class="openbtn" onclick="openNav()">&#9776;</button>
+		<a>DiME</a>
+	</div>
+
+	<div id='empty'></div>
+
+	<!-- Header -->
+	<div id='Head' class="header">
+		<h1>Diffusion Models for Counterfactual Explanations. ACCV 2022 - Oral Presentation</h1>
+	</div>
+
+	<!-- Main body -->
+	<div id='main-am'>
+		<div class="container-links">
+			<div class="content-am" style="width: 100%">
+				<!-- <h3 style="margin-left: 8%; text-align: center">Links</h3> -->
+				<h3 style="text-align: center">Links</h3>
+				<hr>
+				<p style="text-align: center">
+				<!-- Place this tag where you want the button to render. -->
+				<a class="github-button" href="https://github.com/guillaumejs2403/DiME" aria-label="DiME github link" data-size="large">GitHub Code</a>
+				<!-- Place this tag where you want the button to render. -->
+				<a class="github-button" href="https://arxiv.org/abs/2203.15636" data-icon="octicon-repo-template" data-size="large" aria-label="arXiv">Paper</a>
+				</p>
+			</div>
+		</div>
+		<div class="container-links">
+			<div class="content-am" style="width: 100%">
+				<h4 style="text-align: center">TL;DR</h3>
+				<hr>
+				<p>
+					We propose to use Diffusion Model for Counterfactual Explanations (DiME). We propose a simple trick to include the gradients of the target classifier to guide the diffusion process.
+				</p>
+			</div>
+		</div>
+		<div class="container-paper" style="height: 350px">
+			<div class="content-am" style="float: left; width: 100%">
+				<h3 style="text-align: center;">Abstract</h3>
+				<hr>
+				<p>
+					Counterfactual explanations have shown promising results as a post-hoc framework to make image classifiers more explainable. In this paper, we propose DiME, a method allowing the generation of counterfactual images using the recent diffusion models. By leveraging the guided generative diffusion process, our proposed methodology shows how to use the gradients of the target classifier to generate counterfactual explanations of input instances. Further, we analyze current approaches to evaluate spurious correlations and extend the evaluation measurements by proposing a new metric: Correlation Difference. Our experimental validations show that the proposed algorithm surpasses previous state-of-the-art results on 5 out of 6 metrics on CelebA.
+				</p>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

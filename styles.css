@@ -41,7 +41,7 @@ body{
 	background-position: top;
 	background-size: cover;
 	background-repeat: no-repeat;
-	background-image: url("pictures/cover.jpg");
+/*	background-image: url("pictures/cover.jpg");*/
 	background-attachment: fixed;
 	overflow-y: scroll;
 }
@@ -73,6 +73,10 @@ hr {
 
 .body-skills{
 	background-image: url("pictures/skills.jpg");
+}
+
+.body-papers{
+	background-color: lightgrey;
 }
 
 
@@ -565,6 +569,34 @@ button{
 }
 
 .container-am:after {
+	clear: both;
+}
+
+.container-paper {
+	margin-top: 1%;
+	width: 100%;
+	height: 600px;
+	transition-duration: 0.5s;
+	background: rgba(255,255,255,0.75);
+	border-radius: 10px;
+	position: relative;
+}
+
+.container-paper:after {
+	clear: both;
+}
+
+.container-links {
+	margin-top: 1%;
+	width: 100%;
+	height: 150px;
+	transition-duration: 0.5s;
+	background: rgba(255,255,255,0.75);
+	border-radius: 10px;
+	position: relative;
+}
+
+.container-links:after {
 	clear: both;
 }
 
