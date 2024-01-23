@@ -46,6 +46,33 @@
 	<div id='main'>
 		<div style="margin-top: 1%;"></div>
 
+		<!-- TIME -->
+		<button class="oc-button" onclick="openProject('cont-time', 'content-time', 'button-time', 'Text-to-Image Models for Counterfactual Explanations: a Black-Box Approach (WACV 2024)')" style="float: left;" id='button-time'>Text-to-Image Models for Counterfactual Explanations: a Black-Box Approach (WACV 2024)</button>
+
+		<div class="container" id="cont-time">
+			<div class="snapshot">
+				<img src="pictures/time.png" alt='This is a picture of our project TIME' class="snapimg">
+			</div>
+
+			<div class="content" id="content-time">
+				<div class="content-title">
+					<p><strong></strong></p>
+					
+				</div>
+
+				<h3>Text-to-Image Models for Counterfactual Explanations: a Black-Box Approach (WACV 2024)</h3>
+
+				<hr>
+
+				<div style="overflow-x: hidden; overflow-y: auto; height: 73%;">
+					<p>
+						<strong>Abstract:</strong> This paper addresses the challenge of generating Counterfactual Explanations (CEs), involving the identification and modification of the fewest necessary features to alter a classifier's prediction for a given image. Our proposed method, Text-to-Image Models for Counterfactual Explanations (TIME), is a black-box counterfactual technique based on distillation. Unlike previous methods, this approach requires solely the image and its prediction, omitting the need for the classifier's structure, parameters, or gradients. Before generating the counterfactuals, TIME introduces two distinct biases into Stable Diffusion in the form of textual embeddings: the context bias, associated with the image's structure, and the class bias, linked to class-specific features learned by the target classifier. After learning these biases, we find the optimal latent code applying the classifier's predicted class token and regenerate the image using the target embedding as conditioning, producing the counterfactual explanation. Extensive empirical studies validate that TIME can generate explanations of comparable effectiveness even when operating within a black-box setting.  
+					</p>
+					<button onclick="window.location.href='https://guillaumejs2403.github.io/projects/time.html';">Web Page</button>
+				</div>
+			</div>
+		</div>
+
 		<!-- ACE -->
 		<button class="oc-button" onclick="openProject('cont-ace', 'content-ace', 'button-ace', 'Adversarial Counterfactual Visual Explanations (CVPR 2023)')" style="float: left;" id='button-ace'>Adversarial Counterfactual Visual Explanations (CVPR 2023)</button>
 
