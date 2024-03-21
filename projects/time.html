@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Guillaume Jeanneret Sanmiguel</title>
+    <link rel="stylesheet" href="../styles.css">
+    <script src="../scripts.js"></script>
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+</head>
+
+
+
+<body class="body-papers">
+    <!-- Inside the Sidebar -->
+    <div id='mySideBar' class='sidebar'>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <button onclick="window.location.href='../index.html';">Home</button>
+        <button onclick="window.location.href='../summary.html';">Summary</button>
+        <button onclick="window.location.href='../about_me.html';" id='choosen'>About Me</button>
+        <button onclick="window.location.href='../publications.html';">Publications</button>
+        <button onclick="window.location.href='../experience.html';">Experience</button>
+        <button onclick="window.location.href='../skills.html';">Skills</button>
+        <hr>
+        <button onclick="window.location.href='../https://github.com/guillaumejs2403';">GitHub</button>
+        <button onclick="window.location.href='https://scholar.google.com/citations?user=b7nyrXIAAAAJ&hl=es';">Scholar</button>
+        <button onclick="window.location.href='https://co.linkedin.com/in/guillaume-jeanneret-sanmiguel-3b3884142';">LinkedIn</button>
+        <button onclick="window.location.href='../documents/CV_Guillaume_Jeanneret.pdf';"><i>Curriculum Vitae</i></button>
+        <button onclick="copyEmail()" id="email"><span>E-mail</span></button>
+    </div>
+
+    <!-- Top bar -->
+    <div class='navbar'>
+        <button class="openbtn" onclick="openNav()">&#9776;</button>
+        <a>TIME</a>
+    </div>
+
+    <div id='empty'></div>
+
+    <!-- Header -->
+    <div id='Head' class="header">
+        <h1>Text-to-Image Models for Counterfactual Explanations: a Black-Box Approach. WACV 2024</h1>
+    </div>
+
+    <!-- Main body -->
+    <div id='main-am'>
+        <div class="container-links" style="height: auto">
+            <div class="content-am" style="width: 100%">
+                <!-- <h3 style="margin-left: 8%; text-align: center">Links</h3> -->
+                <h3 style="text-align: center">Links</h3>
+                <hr>
+                <p style="text-align: center">
+                <button onclick="window.location.href='https://github.com/guillaumejs2403/TIME';" class="buttonTransparent" style="width: 30%; border: 2px solid black;">
+                    <p>Github Code</p>
+                </button>
+                <button onclick="window.location.href='https://arxiv.org/abs/2309.07944';" class="buttonTransparent" style="width: 30%; border: 2px solid black;">
+                    <p>Paper</p>
+                </button>
+                </p>
+            </div>
+        </div>
+        <div class="container-links" style="height: auto">
+            <div class="content-am" style="width: 100%">
+                <h4 style="text-align: center">TL;DR</h3>
+                <hr>
+                <p>
+                    We propose using Stable Diffusion as a recourse for black-box counterfactual explanations - e.g. using only the input and output of the model. Firstly, our method distills the prediction of the classifier as text-tokens and then modifies the image using inversion techniques.
+                </p>
+            </div>
+        </div>
+        <div class="container-paper" style="height: 260px">
+            <div class="content-am" style="float: left; width: 100%">
+                <h3 style="text-align: center;">Abstract</h3>
+                <hr>
+                <p>
+                    This paper addresses the challenge of generating Counterfactual Explanations (CEs), involving the identification and modification of the fewest necessary features to alter a classifier's prediction for a given image. Our proposed method, Text-to-Image Models for Counterfactual Explanations (TIME), is a black-box counterfactual technique based on distillation. Unlike previous methods, this approach requires solely the image and its prediction, omitting the need for the classifier's structure, parameters, or gradients. Before generating the counterfactuals, TIME introduces two distinct biases into Stable Diffusion in the form of textual embeddings: the context bias, associated with the image's structure, and the class bias, linked to class-specific features learned by the target classifier. After learning these biases, we find the optimal latent code applying the classifier's predicted class token and regenerate the image using the target embedding as conditioning, producing the counterfactual explanation. Extensive empirical studies validate that TIME can generate explanations of comparable effectiveness even when operating within a black-box setting.
+                </p>
+            </div>
+        </div>
+
+        <div class="container-paper" style="height: 500px">
+            <div class="content-am" style="float: left; width: 100%">
+                <h3 style="text-align: center;">Pipeline</h3>
+                <hr>
+                <img src="../pictures/time.png" alt='This is a picture of our project TIME' class="snapimg" style="padding-top: 50px; width: 400px">
+            </div>
+        </div>
+        <div class="container-paper" style="height: 680px">
+            <div class="content-am" style="float: left; width: 100%">
+                <h3 style="text-align: center;">TIME vs ACE vs DiME</h3>
+                <hr>
+                <p style="text-align: center;">TIME generate realistic counterfactuals even when it is black-box.</p>
+                <img src="../pictures/time-qualitative.png" alt='TIME vs ACE vs DiME' class="snapimg" style="padding-top: 25px">
+            </div>
+        </div>
+        <div class="container-paper" style="height: 260px">
+            <div class="content-am" style="float: left; width: 100%">
+                <h3 style="text-align: center;">Citation</h3>
+                <hr>
+
+                <pre style="background-color: lightgrey; width: 95%; font-size: 10px; border-radius: 10px; margin-left: auto; margin-right: auto;">
+                    <p style="font-size: 3; margin-left: auto; margin-right: auto;">
+@InProceedings{Jeanneret_2024_WACV,
+      title     = {Text-to-Image Models for Counterfactual Explanations: a Black-Box Approach}, 
+      author    = {Guillaume Jeanneret and Lo\"ic Simon and Fr\'ed\'eric Jurie},
+      booktitle = {Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)},
+      month     = {January},
+      year      = {2024}
+}
+                    </p>
+                </pre>
+                
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

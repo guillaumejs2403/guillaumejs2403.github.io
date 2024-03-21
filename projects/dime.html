@@ -15,17 +15,17 @@
 	<!-- Inside the Sidebar -->
 	<div id='mySideBar' class='sidebar'>
 		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-		<button onclick="window.location.href='index.html';">Home</button>
-		<button onclick="window.location.href='summary.html';">Summary</button>
-		<button onclick="window.location.href='about_me.html';" id='choosen'>About Me</button>
-		<button onclick="window.location.href='publications.html';">Publications</button>
-		<button onclick="window.location.href='experience.html';">Experience</button>
-		<button onclick="window.location.href='skills.html';">Skills</button>
+		<button onclick="window.location.href='../index.html';">Home</button>
+		<button onclick="window.location.href='../summary.html';">Summary</button>
+		<button onclick="window.location.href='../about_me.html';" id='choosen'>About Me</button>
+		<button onclick="window.location.href='../publications.html';">Publications</button>
+		<button onclick="window.location.href='../experience.html';">Experience</button>
+		<button onclick="window.location.href='../skills.html';">Skills</button>
 		<hr>
-		<button onclick="window.location.href='https://github.com/guillaumejs2403';">GitHub</button>
+		<button onclick="window.location.href='../https://github.com/guillaumejs2403';">GitHub</button>
 		<button onclick="window.location.href='https://scholar.google.com/citations?user=b7nyrXIAAAAJ&hl=es';">Scholar</button>
 		<button onclick="window.location.href='https://co.linkedin.com/in/guillaume-jeanneret-sanmiguel-3b3884142';">LinkedIn</button>
-		<button onclick="window.location.href='documents/CV_Guillaume_Jeanneret.pdf';"><i>Curriculum Vitae</i></button>
+		<button onclick="window.location.href='../documents/CV_Guillaume_Jeanneret.pdf';"><i>Curriculum Vitae</i></button>
 		<button onclick="copyEmail()" id="email"><span>E-mail</span></button>
 	</div>
 
@@ -44,20 +44,22 @@
 
 	<!-- Main body -->
 	<div id='main-am'>
-		<div class="container-links">
+		<div class="container-links" style="height: auto">
 			<div class="content-am" style="width: 100%">
 				<!-- <h3 style="margin-left: 8%; text-align: center">Links</h3> -->
 				<h3 style="text-align: center">Links</h3>
 				<hr>
 				<p style="text-align: center">
-				<!-- Place this tag where you want the button to render. -->
-				<a class="github-button" href="https://github.com/guillaumejs2403/DiME" aria-label="DiME github link" data-size="large">GitHub Code</a>
-				<!-- Place this tag where you want the button to render. -->
-				<a class="github-button" href="https://arxiv.org/abs/2203.15636" data-icon="octicon-repo-template" data-size="large" aria-label="arXiv">Paper</a>
+				<button onclick="window.location.href='https://github.com/guillaumejs2403/DiME';" class="buttonTransparent" style="width: 30%; border: 2px solid black;">
+                    <p>Github Code</p>
+                </button>
+                <button onclick="window.location.href='https://arxiv.org/abs/2203.15636';" class="buttonTransparent" style="width: 30%; border: 2px solid black;">
+                    <p>Paper</p>
+                </button>
 				</p>
 			</div>
 		</div>
-		<div class="container-links">
+		<div class="container-links" style="height: auto">
 			<div class="content-am" style="width: 100%">
 				<h4 style="text-align: center">TL;DR</h3>
 				<hr>
@@ -66,7 +68,7 @@
 				</p>
 			</div>
 		</div>
-		<div class="container-paper" style="height: 350px">
+		<div class="container-paper" style="height: 260px">
 			<div class="content-am" style="float: left; width: 100%">
 				<h3 style="text-align: center;">Abstract</h3>
 				<hr>
@@ -77,7 +79,7 @@
 		</div>
 
 		<div class="container-paper" style="height: 260px">
-            <div class="content-am" style="float: left; width: 100%;, height: 260px">
+            <div class="content-am" style="float: left; width: 100%;">
                 <h3 style="text-align: center;">Citation</h3>
                 <hr>
                 <pre style="background-color: lightgrey; width: 95%; font-size: 10px; border-radius: 10px; margin-left: auto; margin-right: auto;">

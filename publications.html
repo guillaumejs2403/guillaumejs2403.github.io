@@ -40,9 +40,92 @@
 		<h1>Guillaume Jeanneret Sanmiguel, M.Sc.</h1>
 	</div>
 
+
+
 	<!-- Main body -->
 	<div id='main'>
 		<div style="margin-top: 1%;"></div>
+
+		<!-- TIME -->
+		<button class="oc-button" onclick="openProject('cont-time', 'content-time', 'button-time', 'Text-to-Image Models for Counterfactual Explanations: a Black-Box Approach (WACV 2024)')" style="float: left;" id='button-time'>Text-to-Image Models for Counterfactual Explanations: a Black-Box Approach (WACV 2024)</button>
+
+		<div class="container" id="cont-time">
+			<div class="snapshot">
+				<img src="pictures/time.png" alt='This is a picture of our project TIME' class="snapimg">
+			</div>
+
+			<div class="content" id="content-time">
+				<div class="content-title">
+					<p><strong></strong></p>
+					
+				</div>
+
+				<h3>Text-to-Image Models for Counterfactual Explanations: a Black-Box Approach (WACV 2024)</h3>
+
+				<hr>
+
+				<div style="overflow-x: hidden; overflow-y: auto; height: 73%;">
+					<p>
+						<strong>Abstract:</strong> This paper addresses the challenge of generating Counterfactual Explanations (CEs), involving the identification and modification of the fewest necessary features to alter a classifier's prediction for a given image. Our proposed method, Text-to-Image Models for Counterfactual Explanations (TIME), is a black-box counterfactual technique based on distillation. Unlike previous methods, this approach requires solely the image and its prediction, omitting the need for the classifier's structure, parameters, or gradients. Before generating the counterfactuals, TIME introduces two distinct biases into Stable Diffusion in the form of textual embeddings: the context bias, associated with the image's structure, and the class bias, linked to class-specific features learned by the target classifier. After learning these biases, we find the optimal latent code applying the classifier's predicted class token and regenerate the image using the target embedding as conditioning, producing the counterfactual explanation. Extensive empirical studies validate that TIME can generate explanations of comparable effectiveness even when operating within a black-box setting.  
+					</p>
+					<button onclick="window.location.href='https://guillaumejs2403.github.io/projects/time.html';">Web Page</button>
+				</div>
+			</div>
+		</div>
+
+		<!-- ACE -->
+		<button class="oc-button" onclick="openProject('cont-ace', 'content-ace', 'button-ace', 'Adversarial Counterfactual Visual Explanations (CVPR 2023)')" style="float: left;" id='button-ace'>Adversarial Counterfactual Visual Explanations (CVPR 2023)</button>
+
+		<div class="container" id="cont-ace">
+			<div class="snapshot">
+				<img src="pictures/ace.png" alt='This is a picture of our project ACE' class="snapimg">
+			</div>
+
+			<div class="content" id="content-ace">
+				<div class="content-title">
+					<p><strong></strong></p>
+					
+				</div>
+
+				<h3>Adversarial Counterfactual Visual Explanations (CVPR 2023)</h3>
+
+				<hr>
+
+				<div style="overflow-x: hidden; overflow-y: auto; height: 73%;">
+					<p>
+						<strong>Abstract:</strong> Counterfactual explanations and adversarial attacks have a related goal: flipping output labels with minimal perturbations regardless of their characteristics. Yet, adversarial attacks cannot be used directly in a counterfactual explanation perspective, as such perturbations are perceived as noise and not as actionable and understandable image modifications. Building on the robust learning literature, this paper proposes an elegant method to turn adversarial attacks into semantically meaningful perturbations, without modifying the classifiers to explain. The proposed approach hypothesizes that Denoising Diffusion Probabilistic Models are excellent regularizers for avoiding high-frequency and out-of-distribution perturbations when generating adversarial attacks. The paper's key idea is to build attacks through a diffusion model to polish them. This allows studying the target model regardless of its robustification level. Extensive experimentation shows the advantages of our counterfactual explanation approach over current State-of-the-Art in multiple testbeds.  
+					</p>
+					<button onclick="window.location.href='https://guillaumejs2403.github.io/projects/ace.html';">Web Page</button>
+				</div>
+			</div>
+		</div>
+
+		<!-- DiME -->
+		<button class="oc-button" onclick="openProject('cont-dime', 'content-dime', 'button-dime', 'ADiffusion Models for Counterfactual Explanations (ACCV 2022 Oral)')" style="float: left;" id='button-dime'>Diffusion Models for Counterfactual Explanations (ACCV 2022 Oral)</button>
+
+		<div class="container" id="cont-dime">
+			<div class="snapshot">
+				<img src="pictures/dime.png" alt='This is a picture of our project DiME' class="snapimg">
+			</div>
+
+			<div class="content" id="content-dime">
+				<div class="content-title">
+					<p><strong></strong></p>
+					
+				</div>
+
+				<h3>Diffusion Models for Counterfactual Explanations (ACCV 2022 Oral)</h3>
+
+				<hr>
+
+				<div style="overflow-x: hidden; overflow-y: auto; height: 73%;">
+					<p>
+						<strong>Abstract:</strong> Counterfactual explanations have shown promising results as a post-hoc framework to make image classifiers more explainable. In this paper, we propose DiME, a method allowing the generation of counterfactual images using the recent diffusion models. By leveraging the guided generative diffusion process, our proposed methodology shows how to use the gradients of the target classifier to generate counterfactual explanations of input instances. Further, we analyze current approaches to evaluate spurious correlations and extend the evaluation measurements by proposing a new metric: Correlation Difference. Our experimental validations show that the proposed algorithm surpasses previous State-of-the-Art results on 5 out of 6 metrics on CelebA.  
+					</p>
+					<button onclick="window.location.href='https://guillaumejs2403.github.io/projects/dime.html';">Web Page</button>
+				</div>
+			</div>
+		</div>
 
 		<!-- AdvSeverity -->
 		<button class="oc-button" onclick="openProject('cont-advs', 'content-advs', 'button-advs', 'A Hierarchical Assessment of Adversarial Severity (ICCVW 2021)')" style="float: left;" id='button-advs'>A Hierarchical Assessment of Adversarial Severity (ICCVW 2021)</button>
@@ -66,7 +149,7 @@
 					<p>
 						<strong>Abstract:</strong> Adversarial Robustness is a growing field that evidences the brittleness of neural networks. Although the literature on adversarial robustness is vast, a dimension is missing in these studies: assessing how severe the mistakes are. We call this notion "Adversarial Severity" since it quantifies the downstream impact of adversarial corruptions by computing the semantic error between the misclassification and the proper label. We propose to study the effects of adversarial noise by measuring the Robustness and Severity into a large-scale dataset: iNaturalist-H. Our contributions are: (i) we introduce novel Hierarchical Attacks that harness the rich structured space of labels to create adversarial examples. (ii) These attacks allow us to benchmark the Adversarial Robustness and Severity of classification models. (iii) We enhance the traditional adversarial training with a simple yet effective Hierarchical Curriculum Training to learn these nodes gradually within the hierarchical tree. We perform extensive experiments showing that hierarchical defenses allow deep models to boost the adversarial Robustness by 1.85% and reduce the severity of all attacks by 0.17, on average. 
 					</p>
-					<button onclick="window.location.href='https://arxiv.org/abs/2108.11785';">Paper</button>
+					<button onclick="window.location.href='https://cinfonia.uniandes.edu.co/publications/a-hierarchical-assessment-of-adversarial-severity/';">Web Page</button>
 				</div>
 			</div>
 		</div>
@@ -93,7 +176,7 @@
 					<p>
 						<strong>Abstract:</strong> Deep learning models are prone to being fooled by imperceptible perturbations known as adversarial attacks. In this work, we study how equipping models with Test-time Transformation Ensembling (TTE) can work as a reliable defense against such attacks. While transforming the input data, both at train and test times, is known to enhance model performance, its effects on adversarial robustness have not been studied. Here, we present a comprehensive empirical study of the impact of TTE, in the form of widely-used image transforms, on adversarial robustness. We show that TTE consistently improves model robustness against a variety of powerful attacks without any need for re-training, and that this improvement comes at virtually no trade-off with accuracy on clean samples. Finally, we show that the benefits of TTE transfer even to the certified robustness domain, in which TTE provides sizable and consistent improvements. 
 					</p>
-					<button onclick="window.location.href='https://arxiv.org/abs/2107.14110';">Paper</button>
+					<button onclick="window.location.href='https://cinfonia.uniandes.edu.co/publications/enhancing-adversarial-robustness-via-test-time-transformation-ensembling/';">Web Page</button>
 				</div>
 			</div>
 		</div>
@@ -120,7 +203,7 @@
 					<p>
 						<strong>Abstract:</strong> Instance-level video segmentation requires a solid integration of spatial and temporal information. However, current methods rely mostly on domain-specific information (online learning) to produce accurate instance-level segmentations. We propose a novel approach that relies exclusively on the integration of generic spatio-temporal attention cues. Our strategy, named Multi-Attention Instance Network (MAIN), overcomes challenging segmentation scenarios over arbitrary videos without modelling sequence- or instance-specific knowledge. We design MAIN to segment multiple instances in a single forward pass, and optimize it with a novel loss function that favors class agnostic predictions and assigns instance-specific penalties. We achieve state-of-the-art performance on the challenging Youtube-VOS dataset and benchmark, improving the unseen Jaccard and F-Metric by 6.8% and 12.7% respectively, while operating at real-time (30.3 FPS). 
 					</p>
-					<button onclick="window.location.href='https://arxiv.org/abs/1904.05847';">Paper</button>
+					<button onclick="window.location.href='https://cinfonia.uniandes.edu.co/publications/main-multi-attention-instance-network-for-video-segmentation/';">Web Page</button>
 				</div>
 			</div>
 		</div>
@@ -142,7 +225,7 @@
 					<p>
 						<strong>Abstract:</strong> We revisit the benefits of merging classical vision concepts with deep learning models. In particular, we explore the effect on robustness against adversarial attacks of replacing the first layers of various deep architectures with Gabor layers, i.e. convolutional layers with filters that are based on learnable Gabor parameters. We observe that architectures enhanced with Gabor layers gain a consistent boost in robustness over regular models and preserve high generalizing test performance, even though these layers come at a negligible increase in the number of parameters. We then exploit the closed form expression of Gabor filters to derive an expression for a Lipschitz constant of such filters, and harness this theoretical result to develop a regularizer we use during training to further enhance network robustness. We conduct extensive experiments with various architectures (LeNet, AlexNet, VGG16 and WideResNet) on several datasets (MNIST, SVHN, CIFAR10 and CIFAR100) and demonstrate large empirical robustness gains. Furthermore, we experimentally show how our regularizer provides consistent robustness improvements. 
 					</p>
-					<button onclick="window.location.href='https://arxiv.org/abs/1912.05661';" style="margin-left: 3%;">Paper</button>
+					<button onclick="window.location.href='https://cinfonia.uniandes.edu.co/publications/gabor-layers-enhance-network-robustnes/';">Web Page</button>
 				</div>
 			</div>
 		</div>
@@ -158,7 +241,7 @@
 			</div>
 			<div class="content" id="content-sp">
 
-				<h3>Smart Pooling: AI-powered COVID-19 Testing (medRXiv)</h3>
+				<h3>Smart Pooling: AI-powered COVID-19 Testing (Scientific Reports)</h3>
 
 				<hr>
 
@@ -175,7 +258,7 @@
 					<p>
 						<strong>Interpretation:</strong> Pooled testing has been a theoretically alluring option to increase the coverage of diagnostics since its proposition by Dorfmann during World War II. Although there are examples of successfully using pooled testing to reduce the cost of diagnostics, its applicability has remained limited because efficiency drops rapidly as prevalence increases. Not only does our method provide a cost-effective solution to increase the coverage of testing amid the COVID-19 pandemic, but it also demonstrates that artificial intelligence can be used complementary with well-established techniques in the medical praxis.
 					</p>
-					<button onclick="window.location.href='https://www.medrxiv.org/content/10.1101/2020.07.13.20152983v2';">Paper</button>
+					<button onclick="window.location.href='https://cinfonia.uniandes.edu.co/publications/smart-pooling-ai-powered-covid-19-testing/';">Web Page</button>
 				</div>
 			</div>
 		</div>
