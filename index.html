@@ -1,77 +1,604 @@
-<!doctype html>
-<html lang="en-US">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Guillaume Jeanneret Sanmiguel</title>
-	<link rel="stylesheet" href="styles.css">
-	<script src="scripts.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guillaume - Ph.D. in Computer Vision & XAI</title>
+    <style>
+        /* --- VARIABLES DE DISEÑO (Fácil de personalizar) --- */
+        :root {
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --accent-color: #2563eb; /* Azul académico moderno */
+            --accent-hover: #1d4ed8;
+            --border-color: #e2e8f0;
+            --max-width: 900px;
+            --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        /* --- ESTILOS GENERALES --- */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth; /* Desplazamiento suave al hacer clic en el menú */
+        }
+
+        body {
+            font-family: var(--font-stack);
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding-top: 70px; /* Espacio para la barra fija superior */
+        }
+
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: var(--accent-hover);
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+
+        section {
+            padding: 3rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        section:last-of-type {
+            border-bottom: none;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* --- BARRA DE NAVEGACIÓN SUPERIOR (Sticky) --- */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px); /* Efecto translúcido moderno */
+            border-bottom: 1px solid var(--border-color);
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 1.5rem;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            color: var(--text-muted);
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        /* --- SECCIÓN ABOUT ME --- */
+        .profile-wrapper {
+            display: flex;
+            gap: 2.5rem;
+            align-items: flex-start;
+        }
+
+        .profile-bio {
+            flex: 1;
+        }
+
+        .profile-bio h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            line-height: 1.2;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--accent-color);
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+        }
+
+        .bio-text p {
+            margin-bottom: 1rem;
+            color: var(--text-muted);
+        }
+
+        /* Rediseño de Hobbies (Compacto y Humano) */
+        .hobbies-text {
+            font-style: italic;
+            font-size: 0.95rem;
+            border-left: 3px solid var(--accent-color);
+            padding-left: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        /* Botones de contacto */
+        .contact-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.6rem 1.2rem;
+            border-radius: 6px;
+            font-weight: 500;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: none;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-hover);
+            color: white;
+            text-decoration: none;
+        }
+
+        .btn-secondary {
+            background-color: var(--card-bg);
+            color: var(--text-main);
+            border: 1px solid var(--border-color);
+        }
+
+        .btn-secondary:hover {
+            background-color: #f1f5f9;
+            text-decoration: none;
+        }
+
+        /* --- SECCIÓN PUBLICACIONES (Acceso directo sin rodeos) --- */
+        .pub-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .pub-card {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+        }
+
+        .pub-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .pub-authors {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 0.25rem;
+        }
+
+        .pub-authors .me {
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        .pub-venue {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--accent-color);
+            margin-bottom: 0.75rem;
+        }
+
+        .pub-links {
+            display: flex;
+            gap: 1rem;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .pub-links a {
+            background-color: #eff6ff;
+            color: var(--accent-color);
+            padding: 0.25rem 0.6rem;
+            border-radius: 4px;
+        }
+
+        .pub-links a:hover {
+            background-color: var(--accent-color);
+            color: white;
+            text-decoration: none;
+        }
+
+        /* --- SECCIÓN EXPERIENCIA (Cronología híbrida limpia) --- */
+        .exp-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .exp-container {
+                grid-template-columns: 1fr;
+            }
+            .profile-wrapper {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .hobbies-text {
+                border-left: none;
+                border-top: 2px solid var(--accent-color);
+                padding-left: 0;
+                padding-top: 1rem;
+            }
+        }
+
+        .exp-column h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1.2rem;
+            color: var(--text-main);
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .exp-timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .exp-item {
+            position: relative;
+            padding-left: 1rem;
+            border-left: 2px solid var(--border-color);
+        }
+
+        .exp-role {
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        .exp-institution {
+            font-size: 0.9rem;
+            color: var(--accent-color);
+            margin-bottom: 0.25rem;
+        }
+
+        .exp-time {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
+        }
+
+        .exp-desc {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        /* --- SECCIÓN SERVICIO & SKILLS --- */
+        .service-skills-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .service-skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        /* Etiquetas de habilidades en lugar de barras de % */
+        .skill-badge {
+            background-color: #f1f5f9;
+            color: #334155;
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            border: 1px solid var(--border-color);
+        }
+
+        .service-list li {
+            margin-bottom: 0.5rem;
+            color: var(--text-muted);
+            list-style-type: square;
+            margin-left: 1.2rem;
+        }
+
+        /* --- PIE DE PÁGINA --- */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            border-top: 1px solid var(--border-color);
+            background-color: white;
+        }
+    </style>
 </head>
+<body>
 
+    <!-- MENÚ DE NAVEGACIÓN SUPERIOR (Fijo en pantalla) -->
+    <header>
+        <div class="nav-container">
+            <div class="logo">Guillaume</div>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#publications">Publications</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#skills">Service & Skills</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
+    <div class="container">
+        <!-- 1. SECCIÓN ABOUT ME -->
+        <section id="about">
+            <div class="profile-wrapper">
+                <div class="profile-bio">
+                    <h1>Guillaume</h1>
+                    <div class="subtitle">Ph.D. in Computer Vision</div>
+                    
+                    <div class="bio-text">
+                        <p>THIS WEBPAGE IS CURRENTLY UNDER RENOVATION!</p>
+                        <p>
+                            I am postdoctoral researcher at Sorbonne University, in the ISIR laboratory, since november 2024. I've successfully defended my Ph.D. in September 2024, specializing in making deep learning models for computer vision more interpretable. My research interests is mostly Computer Vision, with extensive research experience in explainable AI, robustness against adversarial perturbations and video and image generation.
+                        </p>
+                        <p>
+                            Throughout my academic path, I have published novel research in top-tier computer vision conferences (CVPR, ECCV, WACV, ACCV).
+                        </p>
+                        
+                        <!-- Hobbies Compactados -->
+                        <p class="hobbies-text">
+                            Outside of my research, you'll likely find me playing bass, listening to music, playing video games.
+                        </p>
+                    </div>
 
-<body class="bodyhome">
-	<div id='empty'></div>
+                    <!-- Botones de contacto y Copiado de Email integrado -->
+                    <div class="contact-buttons">
+                        <button id="copy-email-btn" class="btn btn-primary" onclick="copyEmail()">
+                            Copy Email
+                        </button>
+                        <a href="https://scholar.google.com/citations?user=b7nyrXIAAAAJ&hl=es" target="_blank" class="btn btn-secondary">Google Scholar</a>
+                        <a href="https://github.com/guillaumejs2403" target="_blank" class="btn btn-secondary">GitHub</a>
+                        <a href="#" class="btn btn-secondary">Download CV</a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-	<!-- Header -->
-	<div id='Head' class="initheader">
-		<h1>Guillaume Jeanneret Sanmiguel, M.Sc.</h1>
-	</div>
-	<div class='row'>
-		<div class='col'></div>
-		<div class='col'></div>
-		<div class='col'></div>
-		<div class='col'></div>
-		<div class='col'>
-			<button onclick="window.location.href='summary.html';" class="buttonTransparent">
-				<p>Summary</p>
-			</button>
-		</div>
-		<div class='col'>
-			<button onclick="window.location.href='about_me.html';" class="buttonTransparent">
-				<p>About Me</p>
-			</button>
-		</div>
-		<div class='col'>
-			<button onclick="window.location.href='publications.html';" class="buttonTransparent">
-				<p>Publications</p>
-			</button>
-		</div>
-		<div class='col'></div>
-		<div class='col'></div>
-		<div class='col'></div>
-		<div class='col'></div>
-	</div>
+        <!-- 2. SECCIÓN PUBLICACIONES -->
+        <section id="publications">
+            <h2>Publications</h2>
+            <div id="publications-list" class="pub-list">
+            </div>
+        </section>
 
-	<div class="row">
-		<div class='col'></div>
-		<div class='col'></div>
-		<div class='col'></div>
-		<div class='col'></div>
-		<div class='col'>
-			<button onclick="window.location.href='experience.html';" class="buttonTransparent">
-				<p>Experience</p>
-			</button>
-		</div>
-		<div class='col'>
-			<button onclick="window.location.href='skills.html';" class="buttonTransparent">
-				<p>Skills</p>
-			</button>
-		</div>
-		<div class='col'>
-			<button onclick="window.location.href='documents/CV_Guillaume_Jeanneret.pdf';" class="buttonTransparent">
-				<p>Download my CV</p>
-			</button>
-		</div>
-		<div class='col'></div>
-		<div class='col'></div>
-		<div class='col'></div>
-		<div class='col'></div>
-	</div>
+        <!-- 3. SECCIÓN EXPERIENCIA -->
+        <section id="experience">
+            <h2>Experience</h2>
+            <div class="exp-container">
+                
+                <!-- Columna Experiencia en Investigación -->
+                <div class="exp-column">
+                    <h3>Research</h3>
+                    <div class="exp-timeline">
+                        <div class="exp-item">
+                            <div class="exp-role">Postdoctoral Researcher</div>
+                            <div class="exp-institution">Lab Name / University</div>
+                            <div class="exp-time">Sep 2024 - Present</div>
+                            <div class="exp-desc">Continuing my research on visual explanations, focusing on deployment safety and self-supervised models.</div>
+                        </div>
+                        <div class="exp-item">
+                            <div class="exp-role">Ph.D. Candidate</div>
+                            <div class="exp-institution">University Name</div>
+                            <div class="exp-time">Sep 2021 - Aug 2024</div>
+                            <div class="exp-desc">Researched interpretability in CNNs and Vision Transformers. Published 3+ papers in international venues.</div>
+                        </div>
+                    </div>
+                </div>
 
-	<!-- Main body -->
-	<!-- <div id='main'>
+                <!-- Columna Experiencia Docente -->
+                <div class="exp-column">
+                    <h3>Teaching</h3>
+                    <div class="exp-timeline">
+                        <div class="exp-item">
+                            <div class="exp-role">Teaching Assistant</div>
+                            <div class="exp-institution">University Name</div>
+                            <div class="exp-time">2022 - 2024</div>
+                            <div class="exp-desc">Instructed undergraduate students in courses including "Introduction to Computer Vision" and "Deep Learning with PyTorch".</div>
+                        </div>
+                    </div>
+                </div>
 
-	</div> -->
+            </div>
+        </section>
+
+        <!-- 4. SECCIÓN SERVICIOS Y HABILIDADES -->
+        <section id="skills">
+            <div class="service-skills-grid">
+                
+                <!-- Servicio Académico (Revisor) -->
+                <div>
+                    <h2>Academic Service</h2>
+                    <ul class="service-list">
+                        <li><strong>Reviewer:</strong> IEEE/CVF CVPR (2022, 2023, 2024)</li>
+                        <li><strong>Reviewer:</strong> IEEE/CVF ICCV (2023)</li>
+                        <li><strong>Reviewer:</strong> ECCV (2022, 2024)</li>
+                        <li><strong>Reviewer:</strong> IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)</li>
+                    </ul>
+                </div>
+
+                <!-- Habilidades Técnicas como Tags -->
+                <div>
+                    <h2>Skills</h2>
+                    <div class="skills-list">
+                        <span class="skill-badge">Python</span>
+                        <span class="skill-badge">PyTorch</span>
+                        <span class="skill-badge">TensorFlow</span>
+                        <span class="skill-badge">OpenCV</span>
+                        <span class="skill-badge">Computer Vision</span>
+                        <span class="skill-badge">Explainable AI</span>
+                        <span class="skill-badge">Adversarial Robustness</span>
+                        <span class="skill-badge">Linux</span>
+                        <span class="skill-badge">Git</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <p>&copy; 2026 Guillaume. All rights reserved.</p>
+    </footer>
 
 </body>
 </html>
+
+<!-- JAVASCRIPT DE COPIADO RÁPIDO DE EMAIL -->
+<script>
+
+    fetch('publications.json')
+        .then(response => response.json())
+        .then(data => {
+            const container = document.getElementById('publications-list');
+            container.innerHTML = ''; // Limpia el "Loading..."
+            
+            data.forEach(pub => {
+                const pubHtml = `
+                    <div class="pub-item">
+                        <h3>${pub.title}</h3>
+                        <div class="pub-authors">${pub.authors}</div>
+                        <div class="pub-venue">${pub.venue}</div>
+                        <div class="pub-links">
+                            ${pub.pdf ? `<a href="${pub.pdf}">[PDF]</a>` : ''}
+                            ${pub.code ? `<a href="${pub.code}">[Code]</a>` : ''}
+                        </div>
+                    </div>
+                `;
+                container.innerHTML += pubHtml;
+            });
+        })
+        .catch(err => {
+            document.getElementById('publications-list').innerHTML = "Error loading publications.";
+        });
+
+    // Función asíncrona para leer el archivo JSON externo
+    async function loadPublications() {
+        const container = document.getElementById("pub-list");
+        if (!container) return;
+
+        try {
+            // Lee el archivo automáticamente
+            const response = await fetch('publications.json');
+            if (!response.ok) throw new Error("No se pudo cargar el archivo JSON");
+            
+            const publicationsData = await response.json();
+
+            // Renderiza el contenido dinámicamente
+            container.innerHTML = publicationsData.map(pub => {
+                // Pone tu nombre en negrita automáticamente
+                const formattedAuthors = pub.authors.map(author => {
+                    return author.includes("Guillaume") ? `<span class="me">${author}</span>` : author;
+                }).join(", ");
+
+                // Crea los botones solo si el campo no está vacío
+                const linksHtml = `
+                    ${pub.pdf ? `<a href="${pub.pdf}" target="_blank">PDF</a>` : ''}
+                    ${pub.project ? `<a href="${pub.project}" target="_blank">Project Page</a>` : ''}
+                    ${pub.code ? `<a href="${pub.code}" target="_blank">Code</a>` : ''}
+                    ${pub.bibtex ? `<a href="${pub.bibtex}" target="_blank">BibTeX</a>` : ''}
+                `;
+
+                return `
+                    <div class="pub-card">
+                        <div class="pub-title">${pub.title}</div>
+                        <div class="pub-authors">${formattedAuthors}</div>
+                        <div class="pub-venue">${pub.venue}</div>
+                        <div class="pub-links">${linksHtml}</div>
+                    </div>
+                `;
+            }).join("");
+
+        } catch (error) {
+            console.error("Error:", error);
+            container.innerHTML = `<p style="color: var(--text-muted);">Error loading publications. Please check console.</p>`;
+        }
+    }
+
+    // Ejecuta la carga al iniciar la página
+    document.addEventListener("DOMContentLoaded", loadPublications);
+
+    // Tu función existente para copiar el email
+    function copyEmail() {
+        const emailAddress = "your.email@university.edu"; 
+        navigator.clipboard.writeText(emailAddress).then(() => {
+            const btn = document.getElementById("copy-email-btn");
+            const originalText = btn.innerHTML;
+            btn.innerHTML = "Copied! ✓";
+            btn.style.backgroundColor = "#10b981";
+            setTimeout(() => {
+                btn.innerHTML = originalText;
+                btn.style.backgroundColor = "";
+            }, 2000);
+        });
+    }
+</script>
