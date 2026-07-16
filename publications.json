@@ -1,45 +1,21 @@
 [
   {
-    "title": "Diffusion models for counterfactual explanations",
+    "title": "FrescoDiffusion: 4K Image-to-Video with Prior-Regularized Tiled Diffusion",
+    "authors": "Hugo Caselles-Dupré, Mathis Koroglu, <strong>Guillaume Jeanneret</strong>, Arnaud Dapogny, Matthieu Cord",
+    "venue": "arXiv preprint arXiv:2603.17555, 2026",
+    "pdf": "https://arxiv.org/abs/2603.17555"
+  },
+  {
+    "title": "Disentangling Visual Transformers: Patch-level Interpretability for Image Classification",
+    "authors": "Loïc Simon, <strong>Guillaume Jeanneret</strong>, Frédéric Jurie",
+    "venue": "IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops 2025, 2025",
+    "pdf": "https://hal.science/hal-05643836/"
+  },
+  {
+    "title": "Disentangling Visual Transformers: Patch-level Interpretability for Image Classification",
     "authors": "<strong>Guillaume Jeanneret</strong>, Loïc Simon, Frédéric Jurie",
-    "venue": "Proceedings of the Asian conference on computer vision, 2022",
-    "pdf": "https://openaccess.thecvf.com/content/ACCV2022/html/Jeanneret_Diffusion_Models_for_Counterfactual_Explanations_ACCV_2022_paper.html"
-  },
-  {
-    "title": "Adversarial counterfactual visual explanations",
-    "authors": "<strong>Guillaume Jeanneret</strong>, Loïc Simon, Frédéric Jurie",
-    "venue": "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, 2023",
-    "pdf": "http://openaccess.thecvf.com/content/CVPR2023/html/Jeanneret_Adversarial_Counterfactual_Visual_Explanations_CVPR_2023_paper.html"
-  },
-  {
-    "title": "Enhancing adversarial robustness via test-time transformation ensembling",
-    "authors": "Juan C Pérez, Motasem Alfarra, <strong>Guillaume Jeanneret</strong>, Laura Rueda, Ali Thabet, Bernard Ghanem, Pablo Arbeláez",
-    "venue": "Proceedings of the IEEE/CVF International Conference on Computer Vision, 2021",
-    "pdf": "https://openaccess.thecvf.com/content/ICCV2021W/AROW/html/Perez_Enhancing_Adversarial_Robustness_via_Test-Time_Transformation_Ensembling_ICCVW_2021_paper.html"
-  },
-  {
-    "title": "Bodiffusion: Diffusing sparse observations for full-body human motion synthesis",
-    "authors": "Angela Castillo, Maria Escobar, <strong>Guillaume Jeanneret</strong>, Albert Pumarola, Pablo Arbeláez, Ali Thabet, Artsiom Sanakoyeu",
-    "venue": "Proceedings of the IEEE/CVF International Conference on Computer Vision, 2023",
-    "pdf": "https://openaccess.thecvf.com/content/ICCV2023W/CV4Metaverse/html/Castillo_BoDiffusion_Diffusing_Sparse_Observations_for_Full-Body_Human_Motion_Synthesis_ICCVW_2023_paper.html"
-  },
-  {
-    "title": "Gabor layers enhance network robustness",
-    "authors": "Juan C Pérez, Motasem Alfarra, <strong>Guillaume Jeanneret</strong>, Adel Bibi, Ali Thabet, Bernard Ghanem, Pablo Arbeláez",
-    "venue": "N/A, 2020",
-    "pdf": "https://link.springer.com/chapter/10.1007/978-3-030-58545-7_26"
-  },
-  {
-    "title": "Text-to-image models for counterfactual explanations: a black-box approach",
-    "authors": "<strong>Guillaume Jeanneret</strong>, Loïc Simon, Frédéric Jurie",
-    "venue": "Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision, 2024",
-    "pdf": "https://openaccess.thecvf.com/content/WACV2024/html/Jeanneret_Text-to-Image_Models_for_Counterfactual_Explanations_A_Black-Box_Approach_WACV_2024_paper.html"
-  },
-  {
-    "title": "Smart pooling: AI-powered COVID-19 informative group testing",
-    "authors": "María Escobar, <strong>Guillaume Jeanneret</strong>, Laura Bravo-Sánchez, Angela Castillo, Catalina Gómez, Diego Valderrama, Mafe Roa, Julián Martínez, Jorge Madrid-Wolff, Martha Cepeda, Marcela Guevara-Suarez, Olga L Sarmiento, Andrés L Medaglia, Manu Forero-Shelton, Mauricio Velasco, Juan M Pedraza, Rachid Laajaj, Silvia Restrepo, Pablo Arbelaez",
-    "venue": "Scientific Reports, 2022",
-    "pdf": "https://www.nature.com/articles/s41598-022-10128-9"
+    "venue": "Proceedings of the Computer Vision and Pattern Recognition Conference, 2025",
+    "pdf": "https://openaccess.thecvf.com/content/CVPR2025W/XAI4CV/html/Jeanneret_Disentangling_Visual_Transformers_Patch-level_Interpretability_for_Image_Classification_CVPRW_2025_paper.html"
   },
   {
     "title": "OnlyFlow: Optical Flow based Motion Conditioning for Video Diffusion Models",
@@ -48,10 +24,46 @@
     "pdf": "https://openaccess.thecvf.com/content/CVPR2025W/CVEU/html/Koroglu_OnlyFlow_Optical_Flow_based_Motion_Conditioning_for_Video_Diffusion_Models_CVPRW_2025_paper.html"
   },
   {
-    "title": "Disentangling Visual Transformers: Patch-level Interpretability for Image Classification",
+    "title": "Towards explainable and interpretable deep neural networks",
+    "authors": "<strong>Guillaume Jeanneret</strong>",
+    "venue": "PhD Thesis, 2024",
+    "pdf": "#"
+  },
+  {
+    "title": "Diffusion Models for Counterfactual Explanations",
     "authors": "<strong>Guillaume Jeanneret</strong>, Loïc Simon, Frédéric Jurie",
-    "venue": "Proceedings of the Computer Vision and Pattern Recognition Conference, 2025",
-    "pdf": "https://openaccess.thecvf.com/content/CVPR2025W/XAI4CV/html/Jeanneret_Disentangling_Visual_Transformers_Patch-level_Interpretability_for_Image_Classification_CVPRW_2025_paper.html"
+    "venue": "Computer Vision and Image Understanding, 2024",
+    "pdf": "#"
+  },
+  {
+    "title": "Text-to-image models for counterfactual explanations: a black-box approach",
+    "authors": "<strong>Guillaume Jeanneret</strong>, Loïc Simon, Frédéric Jurie",
+    "venue": "Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision, 2024",
+    "pdf": "https://openaccess.thecvf.com/content/WACV2024/html/Jeanneret_Text-to-Image_Models_for_Counterfactual_Explanations_A_Black-Box_Approach_WACV_2024_paper.html"
+  },
+  {
+    "title": "Bodiffusion: Diffusing sparse observations for full-body human motion synthesis",
+    "authors": "Angela Castillo, Maria Escobar, <strong>Guillaume Jeanneret</strong>, Albert Pumarola, Pablo Arbeláez, Ali Thabet, Artsiom Sanakoyeu",
+    "venue": "Proceedings of the IEEE/CVF International Conference on Computer Vision, 2023",
+    "pdf": "https://openaccess.thecvf.com/content/ICCV2023W/CV4Metaverse/html/Castillo_BoDiffusion_Diffusing_Sparse_Observations_for_Full-Body_Human_Motion_Synthesis_ICCVW_2023_paper.html"
+  },
+  {
+    "title": "Adversarial counterfactual visual explanations",
+    "authors": "<strong>Guillaume Jeanneret</strong>, Loïc Simon, Frédéric Jurie",
+    "venue": "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, 2023",
+    "pdf": "http://openaccess.thecvf.com/content/CVPR2023/html/Jeanneret_Adversarial_Counterfactual_Visual_Explanations_CVPR_2023_paper.html"
+  },
+  {
+    "title": "Smart pooling: AI-powered COVID-19 informative group testing",
+    "authors": "María Escobar, <strong>Guillaume Jeanneret</strong>, Laura Bravo-Sánchez, Angela Castillo, Catalina Gómez, Diego Valderrama, Mafe Roa, Julián Martínez, Jorge Madrid-Wolff, Martha Cepeda, Marcela Guevara-Suarez, Olga L Sarmiento, Andrés L Medaglia, Manu Forero-Shelton, Mauricio Velasco, Juan M Pedraza, Rachid Laajaj, Silvia Restrepo, Pablo Arbelaez",
+    "venue": "Scientific Reports, 2022",
+    "pdf": "https://www.nature.com/articles/s41598-022-10128-9"
+  },
+  {
+    "title": "Diffusion models for counterfactual explanations",
+    "authors": "<strong>Guillaume Jeanneret</strong>, Loïc Simon, Frédéric Jurie",
+    "venue": "Proceedings of the Asian conference on computer vision, 2022",
+    "pdf": "https://openaccess.thecvf.com/content/ACCV2022/html/Jeanneret_Diffusion_Models_for_Counterfactual_Explanations_ACCV_2022_paper.html"
   },
   {
     "title": "MAIN: Multi-attention instance network for video segmentation",
@@ -66,28 +78,16 @@
     "pdf": "http://openaccess.thecvf.com/content/ICCV2021W/AROW/html/Jeanneret_A_Hierarchical_Assessment_of_Adversarial_Severity_ICCVW_2021_paper.html"
   },
   {
-    "title": "FrescoDiffusion: 4K Image-to-Video with Prior-Regularized Tiled Diffusion",
-    "authors": "Hugo Caselles-Dupré, Mathis Koroglu, <strong>Guillaume Jeanneret</strong>, Arnaud Dapogny, Matthieu Cord",
-    "venue": "arXiv preprint arXiv:2603.17555, 2026",
-    "pdf": "https://arxiv.org/abs/2603.17555"
+    "title": "Enhancing adversarial robustness via test-time transformation ensembling",
+    "authors": "Juan C Pérez, Motasem Alfarra, <strong>Guillaume Jeanneret</strong>, Laura Rueda, Ali Thabet, Bernard Ghanem, Pablo Arbeláez",
+    "venue": "Proceedings of the IEEE/CVF International Conference on Computer Vision, 2021",
+    "pdf": "https://openaccess.thecvf.com/content/ICCV2021W/AROW/html/Perez_Enhancing_Adversarial_Robustness_via_Test-Time_Transformation_Ensembling_ICCVW_2021_paper.html"
   },
   {
-    "title": "Disentangling Visual Transformers: Patch-level Interpretability for Image Classification",
-    "authors": "Loïc Simon, <strong>Guillaume Jeanneret</strong>, Frédéric Jurie",
-    "venue": "IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops 2025, 2025",
-    "pdf": "https://hal.science/hal-05643836/"
-  },
-  {
-    "title": "Towards explainable and interpretable deep neural networks",
-    "authors": "<strong>Guillaume Jeanneret</strong>",
-    "venue": "N/A, 2024",
-    "pdf": "#"
-  },
-  {
-    "title": "Diffusion Models for Counterfactual Explanations",
-    "authors": "<strong>Guillaume Jeanneret</strong>, Loïc Simon, Frédéric Jurie",
-    "venue": "Computer Vision and Image Understanding, 2024",
-    "pdf": "#"
+    "title": "Gabor layers enhance network robustness",
+    "authors": "Juan C Pérez, Motasem Alfarra, <strong>Guillaume Jeanneret</strong>, Adel Bibi, Ali Thabet, Bernard Ghanem, Pablo Arbeláez",
+    "venue": "N/A, 2020",
+    "pdf": "https://link.springer.com/chapter/10.1007/978-3-030-58545-7_26"
   },
   {
     "title": "Supplementary Material Text-to-Image Models for Counterfactual Explanations: a Black-Box Approach",

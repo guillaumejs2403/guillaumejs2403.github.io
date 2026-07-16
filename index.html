@@ -368,6 +368,23 @@
             border-top: 1px solid var(--border-color);
             background-color: white;
         }
+
+        .column-right {
+          float: left;
+          width: 70%;
+        }
+
+        .column-left {
+          float: left;
+          width: 30%;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
     </style>
 </head>
 <body>
@@ -375,13 +392,13 @@
     <!-- MENÚ DE NAVEGACIÓN SUPERIOR (Fijo en pantalla) -->
     <header>
         <div class="nav-container">
-            <div class="logo">Guillaume</div>
+            <div class="logo">Guillaume Jeanneret</div>
             <nav>
                 <ul>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#publications">Publications</a></li>
                     <li><a href="#experience">Experience</a></li>
                     <li><a href="#skills">Service & Skills</a></li>
+                    <li><a href="#publications">Publications</a></li>
                 </ul>
             </nav>
         </div>
@@ -392,22 +409,27 @@
         <section id="about">
             <div class="profile-wrapper">
                 <div class="profile-bio">
-                    <h1>Guillaume</h1>
+                    <h1>Guillaume Jeanneret</h1>
                     <div class="subtitle">Ph.D. in Computer Vision</div>
-                    
-                    <div class="bio-text">
-                        <p>THIS WEBPAGE IS CURRENTLY UNDER RENOVATION!</p>
-                        <p>
-                            I am postdoctoral researcher at Sorbonne University, in the ISIR laboratory, since november 2024. I've successfully defended my Ph.D. in September 2024, specializing in making deep learning models for computer vision more interpretable. My research interests is mostly Computer Vision, with extensive research experience in explainable AI, robustness against adversarial perturbations and video and image generation.
-                        </p>
-                        <p>
-                            Throughout my academic path, I have published novel research in top-tier computer vision conferences (CVPR, ECCV, WACV, ACCV).
-                        </p>
-                        
-                        <!-- Hobbies Compactados -->
-                        <p class="hobbies-text">
-                            Outside of my research, you'll likely find me playing bass, listening to music, playing video games.
-                        </p>
+                    <div class="row">
+                        <div class="column-left">
+                            <img src="documents/grado.jpg" alt="Photo" style="width:90%">
+                        </div>
+                        <div class="column-right">
+                            <div class="bio-text">
+                                <p>
+                                    I am postdoctoral researcher at Sorbonne University, in the ISIR laboratory, since november 2024. I've successfully defended my Ph.D. in September 2024, specializing in making deep learning models for computer vision more interpretable. My research interests is mostly Computer Vision, with extensive research experience in explainable AI, robustness against adversarial perturbations and video and image generation.
+                                </p>
+                                <p>
+                                    Throughout my academic path, I have published novel research in top-tier computer vision conferences (CVPR, ECCV, WACV, ACCV).
+                                </p>
+                                
+                                <!-- Hobbies Compactados -->
+                                <p class="hobbies-text">
+                                    Outside of my research, you'll likely find me playing bass, listening to music, eating, or playing video games :).
+                                </p>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- Botones de contacto y Copiado de Email integrado -->
@@ -417,20 +439,13 @@
                         </button>
                         <a href="https://scholar.google.com/citations?user=b7nyrXIAAAAJ&hl=es" target="_blank" class="btn btn-secondary">Google Scholar</a>
                         <a href="https://github.com/guillaumejs2403" target="_blank" class="btn btn-secondary">GitHub</a>
-                        <a href="#" class="btn btn-secondary">Download CV</a>
+                        <a href="documents/CV_Guillaume_Jeanneret.pdf" class="btn btn-secondary">Download CV</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 2. SECCIÓN PUBLICACIONES -->
-        <section id="publications">
-            <h2>Publications</h2>
-            <div id="publications-list" class="pub-list">
-            </div>
-        </section>
-
-        <!-- 3. SECCIÓN EXPERIENCIA -->
+        <!-- 2. SECCIÓN EXPERIENCIA -->
         <section id="experience">
             <h2>Experience</h2>
             <div class="exp-container">
@@ -441,15 +456,21 @@
                     <div class="exp-timeline">
                         <div class="exp-item">
                             <div class="exp-role">Postdoctoral Researcher</div>
-                            <div class="exp-institution">Lab Name / University</div>
-                            <div class="exp-time">Sep 2024 - Present</div>
-                            <div class="exp-desc">Continuing my research on visual explanations, focusing on deployment safety and self-supervised models.</div>
+                            <div class="exp-institution">ISIR Lab / Sorbonne Université, France</div>
+                            <div class="exp-time">Nov 2024 - Nov 2026</div>
+                            <div class="exp-desc">Video Generation and Edition.</div>
                         </div>
                         <div class="exp-item">
-                            <div class="exp-role">Ph.D. Candidate</div>
-                            <div class="exp-institution">University Name</div>
-                            <div class="exp-time">Sep 2021 - Aug 2024</div>
-                            <div class="exp-desc">Researched interpretability in CNNs and Vision Transformers. Published 3+ papers in international venues.</div>
+                            <div class="exp-role">Ph.D. Student</div>
+                            <div class="exp-institution">GREYC Lab / Université de Caen, France</div>
+                            <div class="exp-time">Sep 2021 - Sep 2024</div>
+                            <div class="exp-desc">Interpretable Computer Vision.</div>
+                        </div>
+                        <div class="exp-item">
+                            <div class="exp-role">Graduate Research Assistant</div>
+                            <div class="exp-institution">Universidad de los Andes, Colombia</div>
+                            <div class="exp-time">Jan 2019 - Dec 2021</div>
+                            <div class="exp-desc">Image Segmentation and Generation</div>
                         </div>
                     </div>
                 </div>
@@ -459,10 +480,34 @@
                     <h3>Teaching</h3>
                     <div class="exp-timeline">
                         <div class="exp-item">
-                            <div class="exp-role">Teaching Assistant</div>
-                            <div class="exp-institution">University Name</div>
+                            <div class="exp-role">Graduate Teaching Assistant</div>
+                            <div class="exp-institution">Sorbonne Université, France</div>
+                            <div class="exp-time">Sep 2025 - Jan 2026</div>
+                            <div class="exp-desc">Instructed master students in "Pattern Recognition for Image Analysis and Interpretation".</div>
+                        </div>
+                    </div>
+                    <div class="exp-timeline">
+                        <div class="exp-item">
+                            <div class="exp-role">Graduate Teaching Assistant</div>
+                            <div class="exp-institution">ENSICAEN, France</div>
+                            <div class="exp-time">Oct-Dec (2022/2023)</div>
+                            <div class="exp-desc">Instructed master students in "Tools for Computer Vision".</div>
+                        </div>
+                    </div>
+                    <div class="exp-timeline">
+                        <div class="exp-item">
+                            <div class="exp-role">Graduate Teaching Assistant</div>
+                            <div class="exp-institution">Universidad de los Andes, Colombia</div>
                             <div class="exp-time">2022 - 2024</div>
-                            <div class="exp-desc">Instructed undergraduate students in courses including "Introduction to Computer Vision" and "Deep Learning with PyTorch".</div>
+                            <div class="exp-desc">Instructed undergraduate students in courses including "Scientific Programming" and "Image Processing and Analysis".</div>
+                        </div>
+                    </div>
+                    <div class="exp-timeline">
+                        <div class="exp-item">
+                            <div class="exp-role">Undergrad Teaching Assistant</div>
+                            <div class="exp-institution">Universidad de los Andes, Colombia</div>
+                            <div class="exp-time">Jul-Dec 2015 / Jan 2016 - Dec 2017</div>
+                            <div class="exp-desc">Instructed undergraduate students in courses including "Object Oriented Programming", "Accompaniment Program", and "Processing and Image Analysis".</div>
                         </div>
                     </div>
                 </div>
@@ -470,7 +515,7 @@
             </div>
         </section>
 
-        <!-- 4. SECCIÓN SERVICIOS Y HABILIDADES -->
+        <!-- 3. SECCIÓN SERVICIOS Y HABILIDADES -->
         <section id="skills">
             <div class="service-skills-grid">
                 
@@ -478,9 +523,9 @@
                 <div>
                     <h2>Academic Service</h2>
                     <ul class="service-list">
-                        <li><strong>Reviewer:</strong> IEEE/CVF CVPR (2022, 2023, 2024)</li>
-                        <li><strong>Reviewer:</strong> IEEE/CVF ICCV (2023)</li>
-                        <li><strong>Reviewer:</strong> ECCV (2022, 2024)</li>
+                        <li><strong>Reviewer:</strong> IEEE/CVF CVPR (2022 to 2026)</li>
+                        <li><strong>Reviewer:</strong> IEEE/CVF ICCV (2023 to 2025)</li>
+                        <li><strong>Reviewer:</strong> ECCV (2022 to 2026)</li>
                         <li><strong>Reviewer:</strong> IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)</li>
                     </ul>
                 </div>
@@ -491,16 +536,27 @@
                     <div class="skills-list">
                         <span class="skill-badge">Python</span>
                         <span class="skill-badge">PyTorch</span>
-                        <span class="skill-badge">TensorFlow</span>
-                        <span class="skill-badge">OpenCV</span>
+                        <span class="skill-badge">Linux</span>
+                        <span class="skill-badge">Git</span>
                         <span class="skill-badge">Computer Vision</span>
                         <span class="skill-badge">Explainable AI</span>
                         <span class="skill-badge">Adversarial Robustness</span>
-                        <span class="skill-badge">Linux</span>
-                        <span class="skill-badge">Git</span>
+                        <span class="skill-badge">Image/Video Generation</span>
                     </div>
                 </div>
 
+            </div>
+        </section>
+
+        <!-- 4. SECCIÓN PUBLICACIONES -->
+        <section id="publications">
+            <h2>Publications</h2>
+            <hr>
+            <span>
+                <h3>⚠️The files are updated automatically, so there may be errors. Please check my Google Scholar profile for more accurate information.⚠️</h3>
+            </span>
+            <hr>
+            <div id="publications-list" class="pub-list">
             </div>
         </section>
     </div>

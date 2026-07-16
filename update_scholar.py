@@ -7,7 +7,7 @@ SCHOLAR_ID = "b7nyrXIAAAAJ"
 
 # 2. Escribe tu nombre tal cual aparece en tus papers para que el script lo ponga en negrita automáticamente
 MY_NAME = "Guillaume Jeanneret" 
-MY_NAME2 = "Guillaume Jeanneret Sanmiguel" 
+MY_NAME2 = "Sanmiguel" 
 
 def update_publications():
     try:
@@ -15,7 +15,7 @@ def update_publications():
         author = scholarly.search_author_id(SCHOLAR_ID)
         
         print(f"Author found: {author.get('name')}. Fetching publications list...")
-        author = scholarly.fill(author, sections=['publications'])
+        author = scholarly.fill(author, sections=['publications'], sortby='year')
         
         # ⚠️ PRO TIP: Limitamos a los primeros 12 artículos. 
         # Si intentas rellenar 50 artículos de golpe, Google te bloqueará por detectar tráfico bot.
@@ -37,7 +37,7 @@ def update_publications():
             pub_url = pub_filled.get('pub_url', '#')
             
             # Ponemos tu nombre en negrita automáticamente
-            formatted_authors = authors.replace(MY_NAME, f"<strong>{MY_NAME}</strong>").replace(' and ', ', ')
+            formatted_authors = authors.replace(MY_NAME, f"<strong>{MY_NAME}</strong>").replace(MY_NAME2, f"<strong>{MY_NAME2}</strong>").replace(' and ', ', ')
             
             publications.append({
                 "title": title,
