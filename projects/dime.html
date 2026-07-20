@@ -1,102 +1,310 @@
-<!doctype html>
-<html lang="en-US">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Guillaume Jeanneret Sanmiguel</title>
-	<link rel="stylesheet" href="../styles.css">
-	<script src="../scripts.js"></script>
-	<!-- Place this tag in your head or just before your close body tag. -->
-	<script async defer src="https://buttons.github.io/buttons.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DiME - Diffusion Models for Counterfactual Explanations - Guillaume Jeanneret</title>
+    <style>
+        /* --- VARIABLES DE DISEÑO --- */
+        :root {
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --accent-color: #2563eb;
+            --accent-hover: #1d4ed8;
+            --border-color: #e2e8f0;
+            --max-width: 900px;
+            --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        /* --- ESTILOS GENERALES --- */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-stack);
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding-top: 70px;
+        }
+
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: var(--accent-hover);
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+
+        section {
+            padding: 2.5rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        section:last-of-type {
+            border-bottom: none;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            line-height: 1.3;
+            margin-bottom: 0.5rem;
+            color: var(--text-main);
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1.2rem;
+            color: var(--text-main);
+        }
+
+        .venue-badge {
+            font-size: 1.1rem;
+            color: var(--accent-color);
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .authors-list {
+            font-size: 1rem;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+        }
+
+        .authors-list .me {
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        /* --- BARRA DE NAVEGACIÓN SUPERIOR --- */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 1.5rem;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            color: var(--text-muted);
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        /* --- BOTONES DE ENLACE --- */
+        .project-links {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.6rem 1.2rem;
+            border-radius: 6px;
+            font-weight: 500;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: none;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-hover);
+            color: white;
+            text-decoration: none;
+        }
+
+        .btn-secondary {
+            background-color: var(--card-bg);
+            color: var(--text-main);
+            border: 1px solid var(--border-color);
+        }
+
+        .btn-secondary:hover {
+            background-color: #f1f5f9;
+            text-decoration: none;
+        }
+
+        /* --- CONTENIDO Y TARJETAS --- */
+        .card {
+            background: var(--card-bg);
+            padding: 1.8rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+            margin-bottom: 1.5rem;
+        }
+
+        .tldr-card {
+            background-color: #eff6ff;
+            border-color: #bfdbfe;
+        }
+
+        .tldr-card p {
+            color: #1e40af;
+            font-weight: 500;
+        }
+
+        /* --- BLOQUE BIBTEX --- */
+        pre {
+            background-color: #f1f5f9;
+            padding: 1.2rem;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+            font-family: monospace;
+            font-size: 0.85rem;
+            overflow-x: auto;
+            color: var(--text-main);
+        }
+
+        /* --- PIE DE PÁGINA --- */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            border-top: 1px solid var(--border-color);
+            background-color: white;
+        }
+    </style>
 </head>
+<body>
 
+    <!-- MENÚ DE NAVEGACIÓN SUPERIOR -->
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">Guillaume Jeanneret</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#experience">Experience</a></li>
+                    <li><a href="index.html#skills">Service & Skills</a></li>
+                    <li><a href="index.html#publications">Publications</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
+    <div class="container">
+        
+        <!-- ENCABEZADO DEL PROYECTO -->
+        <section id="header-project">
+            <h1>Diffusion Models for Counterfactual Explanations</h1>
+            <div class="venue-badge">ACCV 2022 (Oral Presentation)</div>
+            <div class="authors-list">
+                <span class="me">Guillaume Jeanneret</span>, Loïc Simon, Frédéric Jurie
+            </div>
+            
+            <div class="project-links">
+                <a href="https://github.com/guillaumejs2403/DiME" target="_blank" class="btn btn-primary">Code (GitHub)</a>
+                <a href="https://arxiv.org/abs/2203.15636" target="_blank" class="btn btn-secondary">Paper (arXiv)</a>
+            </div>
+        </section>
 
-<body class="body-papers">
-	<!-- Inside the Sidebar -->
-	<div id='mySideBar' class='sidebar'>
-		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-		<button onclick="window.location.href='../index.html';">Home</button>
-		<button onclick="window.location.href='../summary.html';">Summary</button>
-		<button onclick="window.location.href='../about_me.html';" id='choosen'>About Me</button>
-		<button onclick="window.location.href='../publications.html';">Publications</button>
-		<button onclick="window.location.href='../experience.html';">Experience</button>
-		<button onclick="window.location.href='../skills.html';">Skills</button>
-		<hr>
-		<button onclick="window.location.href='../https://github.com/guillaumejs2403';">GitHub</button>
-		<button onclick="window.location.href='https://scholar.google.com/citations?user=b7nyrXIAAAAJ&hl=es';">Scholar</button>
-		<button onclick="window.location.href='https://co.linkedin.com/in/guillaume-jeanneret-sanmiguel-3b3884142';">LinkedIn</button>
-		<button onclick="window.location.href='../documents/CV_Guillaume_Jeanneret.pdf';"><i>Curriculum Vitae</i></button>
-		<button onclick="copyEmail()" id="email"><span>E-mail</span></button>
-	</div>
+        <!-- TL;DR -->
+        <section id="tldr">
+            <div class="card tldr-card">
+                <h2>TL;DR</h2>
+                <p>
+                    We propose to use Diffusion Models for Counterfactual Explanations (DiME). We propose a simple trick to include the gradients of the target classifier to guide the diffusion process.
+                </p>
+            </div>
+        </section>
 
-	<!-- Top bar -->
-	<div class='navbar'>
-		<button class="openbtn" onclick="openNav()">&#9776;</button>
-		<a>DiME</a>
-	</div>
+        <!-- ABSTRACT -->
+        <section id="abstract">
+            <h2>Abstract</h2>
+            <div class="card">
+                <p style="color: var(--text-muted);">
+                    Counterfactual explanations have shown promising results as a post-hoc framework to make image classifiers more explainable. In this paper, we propose DiME, a method allowing the generation of counterfactual images using the recent diffusion models. By leveraging the guided generative diffusion process, our proposed methodology shows how to use the gradients of the target classifier to generate counterfactual explanations of input instances. Further, we analyze current approaches to evaluate spurious correlations and extend the evaluation measurements by proposing a new metric: Correlation Difference. Our experimental validations show that the proposed algorithm surpasses previous state-of-the-art results on 5 out of 6 metrics on CelebA.
+                </p>
+            </div>
+        </section>
 
-	<div id='empty'></div>
+        <!-- PIPELINE -->
+        <section id="pipeline">
+            <h2>Pipeline</h2>
+            <div class="card">
+                <div class="media-container">
+                    <img src="assets/dime.png" alt="DIME Pipeline Overview">
+                </div>
+            </div>
+        </section>
 
-	<!-- Header -->
-	<div id='Head' class="header">
-		<h1>Diffusion Models for Counterfactual Explanations. ACCV 2022 - Oral Presentation</h1>
-	</div>
-
-	<!-- Main body -->
-	<div id='main-am'>
-		<div class="container-links" style="height: auto">
-			<div class="content-am" style="width: 100%">
-				<!-- <h3 style="margin-left: 8%; text-align: center">Links</h3> -->
-				<h3 style="text-align: center">Links</h3>
-				<hr>
-				<p style="text-align: center">
-				<button onclick="window.location.href='https://github.com/guillaumejs2403/DiME';" class="buttonTransparent" style="width: 30%; border: 2px solid black;">
-                    <p>Github Code</p>
-                </button>
-                <button onclick="window.location.href='https://arxiv.org/abs/2203.15636';" class="buttonTransparent" style="width: 30%; border: 2px solid black;">
-                    <p>Paper</p>
-                </button>
-				</p>
-			</div>
-		</div>
-		<div class="container-links" style="height: auto">
-			<div class="content-am" style="width: 100%">
-				<h4 style="text-align: center">TL;DR</h3>
-				<hr>
-				<p>
-					We propose to use Diffusion Model for Counterfactual Explanations (DiME). We propose a simple trick to include the gradients of the target classifier to guide the diffusion process.
-				</p>
-			</div>
-		</div>
-		<div class="container-paper" style="height: 260px">
-			<div class="content-am" style="float: left; width: 100%">
-				<h3 style="text-align: center;">Abstract</h3>
-				<hr>
-				<p>
-					Counterfactual explanations have shown promising results as a post-hoc framework to make image classifiers more explainable. In this paper, we propose DiME, a method allowing the generation of counterfactual images using the recent diffusion models. By leveraging the guided generative diffusion process, our proposed methodology shows how to use the gradients of the target classifier to generate counterfactual explanations of input instances. Further, we analyze current approaches to evaluate spurious correlations and extend the evaluation measurements by proposing a new metric: Correlation Difference. Our experimental validations show that the proposed algorithm surpasses previous state-of-the-art results on 5 out of 6 metrics on CelebA.
-				</p>
-			</div>
-		</div>
-
-		<div class="container-paper" style="height: 260px">
-            <div class="content-am" style="float: left; width: 100%;">
-                <h3 style="text-align: center;">Citation</h3>
-                <hr>
-                <pre style="background-color: lightgrey; width: 95%; font-size: 10px; border-radius: 10px; margin-left: auto; margin-right: auto;">
-                    <p style="font-size: 3; margin-left: auto; margin-right: auto;">
-@inproceedings{Jeanneret_2022_ACCV,
+        <!-- CITATION -->
+        <section id="citation">
+            <h2>Citation</h2>
+            <pre><code>@inproceedings{Jeanneret_2022_ACCV,
     author    = {Jeanneret, Guillaume and Simon, Lo\"ic and Fr\'ed\'eric Jurie},
     title     = {Diffusion Models for Counterfactual Explanations},
     booktitle = {Proceedings of the Asian Conference on Computer Vision (ACCV)},
     month     = {December},
     year      = {2022}
-}
-                    </p>
-                </pre>
-                
-            </div>
-        </div>
-	</div>
+}</code></pre>
+        </section>
+
+    </div>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <p>&copy; 2026 Guillaume. All rights reserved.</p>
+    </footer>
 
 </body>
 </html>
