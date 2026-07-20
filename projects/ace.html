@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Guillaume Jeanneret Sanmiguel</title>
+    <link rel="stylesheet" href="../styles.css">
+    <script src="../scripts.js"></script>
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+</head>
+
+
+
+<body class="body-papers">
+    <!-- Inside the Sidebar -->
+    <div id='mySideBar' class='sidebar'>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <button onclick="window.location.href='../index.html';">Home</button>
+        <button onclick="window.location.href='../summary.html';">Summary</button>
+        <button onclick="window.location.href='../about_me.html';" id='choosen'>About Me</button>
+        <button onclick="window.location.href='../publications.html';">Publications</button>
+        <button onclick="window.location.href='../experience.html';">Experience</button>
+        <button onclick="window.location.href='../skills.html';">Skills</button>
+        <hr>
+        <button onclick="window.location.href='../https://github.com/guillaumejs2403';">GitHub</button>
+        <button onclick="window.location.href='https://scholar.google.com/citations?user=b7nyrXIAAAAJ&hl=es';">Scholar</button>
+        <button onclick="window.location.href='https://co.linkedin.com/in/guillaume-jeanneret-sanmiguel-3b3884142';">LinkedIn</button>
+        <button onclick="window.location.href='../documents/CV_Guillaume_Jeanneret.pdf';"><i>Curriculum Vitae</i></button>
+        <button onclick="copyEmail()" id="email"><span>E-mail</span></button>
+    </div>
+
+    <!-- Top bar -->
+    <div class='navbar'>
+        <button class="openbtn" onclick="openNav()">&#9776;</button>
+        <a>ACE</a>
+    </div>
+
+    <div id='empty'></div>
+
+    <!-- Header -->
+    <div id='Head' class="header">
+        <h1>Adversarial Counterfactual Visual Explanations. CVPR 2023</h1>
+    </div>
+
+    <!-- Main body -->
+    <div id='main-am'>
+        <div class="container-links" style="height: auto">
+            <div class="content-am" style="width: 100%;">
+                <!-- <h3 style="margin-left: 8%; text-align: center">Links</h3> -->
+                <h3 style="text-align: center">Links</h3>
+                <hr>
+                <p style="text-align: center">
+                <button onclick="window.location.href='https://github.com/guillaumejs2403/ACE';" class="buttonTransparent" style="width: 30%; border: 2px solid black;">
+                    <p>Github Code</p>
+                </button>
+                <button onclick="window.location.href='https://arxiv.org/abs/2303.09962';" class="buttonTransparent" style="width: 30%; border: 2px solid black;">
+                    <p>Paper</p>
+                </button>
+                <button onclick="window.location.href='https://www.youtube.com/watch?v=ykTUSSTZOME';" class="buttonTransparent" style="width: 30%; border: 2px solid black;">
+                    <p>YouTube Video</p>
+                </button>
+                </p>
+            </div>
+        </div>
+        <div class="container-links">
+            <div class="content-am" style="width: 100%">
+                <h4 style="text-align: center">TL;DR</h3>
+                <hr>
+                <p>
+                    We propose to use Adversarial Counterfactual Explanation (ACE). We generate a counterfactual explanation by attacking the image through a DDPM-Classifier ensemble. Finally, we post-process the explanation via an inpainting strategy.
+                </p>
+            </div>
+        </div>
+        <div class="container-paper" style="height: 260px">
+            <div class="content-am" style="float: left; width: 100%">
+                <h3 style="text-align: center;">Abstract</h3>
+                <hr>
+                <p>
+                    Counterfactual explanations and adversarial attacks have a related goal: flipping output labels with minimal perturbations regardless of their characteristics. Yet, adversarial attacks cannot be used directly in a counterfactual explanation perspective, as such perturbations are perceived as noise and not as actionable and understandable image modifications. Building on the robust learning literature, this paper proposes an elegant method to turn adversarial attacks into semantically meaningful perturbations, without modifying the classifiers to explain. The proposed approach hypothesizes that Denoising Diffusion Probabilistic Models are excellent regularizers for avoiding high-frequency and out-of-distribution perturbations when generating adversarial attacks. The paper's key idea is to build attacks through a diffusion model to polish them. This allows studying the target model regardless of its robustification level. Extensive experimentation shows the advantages of our counterfactual explanation approach over current State-of-the-Art in multiple testbeds.
+                </p>
+            </div>
+        </div>
+        <div class="container-paper" style="height: 500px">
+            <div class="content-am" style="float: left; width: 100%">
+                <h3 style="text-align: center;">Pipeline</h3>
+                <hr>
+                <img src="../pictures/ace.png" alt='This is a picture of our project ACE' class="snapimg">
+            </div>
+        </div>
+        <div class="container-paper" style="height: 400px">
+            <div class="content-am" style="float: left; width: 100%">
+                <h3 style="text-align: center;">Attack Evolution</h3>
+                <hr>
+                <div style="text-align: center;">
+                    <p style="text-align: center;"> <b>Left</b>: Pre-Explanation | <b>Right</b>: Filtered Explanation</p>
+                    <video width="537" height="256" controls>
+                        <source src="../pictures/video-ace-example1.webM" type="video/webM">
+                        Your browser does not support the video tag.
+                    </video>
+
+                </div>
+            </div>
+        </div>
+        <div class="container-paper" style="height: 450px">
+            <div class="content-am" style="float: left; width: 100%">
+                <h3 style="text-align: center;">With ACE, we can create natural adversarial examples </h3>
+                <hr>
+                <p style="text-align: center;">ACE helps in finding weaknesses.</p>
+                <img src="../pictures/acc.png" alt='ACE detects biases' class="snapimg" style="padding-top: 65px">
+            </div>
+        </div>
+        <div class="container-paper" style="height: 680px">
+            <div class="content-am" style="float: left; width: 100%">
+                <h3 style="text-align: center;">ACE vs DiME</h3>
+                <hr>
+                <p style="text-align: center;">ACE qualitatively performs better than previous State-of-the-Art.</p>
+                <img src="../pictures/acevsdime.png" alt='ACE vs DiME' class="snapimg" style="padding-top: 25px">
+            </div>
+        </div>
+        <div class="container-paper" style="height: 260px">
+            <div class="content-am" style="float: left; width: 100%">
+                <h3 style="text-align: center;">Citation</h3>
+                <hr>
+
+                <pre style="background-color: lightgrey; width: 95%; font-size: 10px; border-radius: 10px; margin-left: auto; margin-right: auto;">
+                    <p style="font-size: 3; margin-left: auto; margin-right: auto;">
+@inproceedings{Jeanneret_2023_CVPR,
+    author    = {Jeanneret, Guillaume and Simon, Lo\"ic and Fr\'ed\'eric Jurie},
+    title     = {Adversarial Counterfactual Visual Explanations},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    month     = {June},
+    year      = {2023}
+}
+                    </p>
+                </pre>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
